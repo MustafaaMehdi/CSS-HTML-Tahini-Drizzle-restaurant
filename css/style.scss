@@ -1,3 +1,9 @@
+@import "vendor/normalize";
+
+@import "mobile";
+
+@import "desktop";
+
 body {
   background-color: yellow;
 }
