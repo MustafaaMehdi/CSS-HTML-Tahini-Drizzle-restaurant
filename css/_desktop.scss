@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+}
+
+header {
+    flex-direction: column;
+
+    .navTitle {
+        display: flex;
+    }
+}
+
+.page1 {
+    grid-column: span 11;
+    min-height: 100vh;
+
+    .top,
+    .bottom {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(11, 1fr);
+    }
+
+    .top {
+        min-height: 50vh;
+
+        .pageTitle {
+            grid-column: span 4;
+            border: 2px solid green;
+        }
+    }
+
+    .pageText {
+        grid-column: span 7;
+        border: 2px solid green;
+    }
+
+    .bottom {
+        min-height: 50vh;
+
+        .salladImg {
+            width: 100%;
+            height: 100%;
+
+            grid-column: span 5;
+            object-fit: cover;
+            border: 2px solid green;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .pageText {
+            grid-column: span 6;
+            border: 2px solid green
+        }
+    }
+}
