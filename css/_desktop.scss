@@ -10,10 +10,14 @@ main {
 }
 
 header {
+    display: flex;
     flex-direction: column;
 
     .navTitle {
-        display: flex;
+        writing-mode: vertical-lr; 
+        text-orientation: upright;
+        text-transform: uppercase;
+        font-size: 3.5rem;
     }
 }
 
@@ -29,7 +33,7 @@ header {
     }
 
     .top {
-        min-height: 50vh;
+        // min-height: 50vh;
 
         .pageTitle {
             grid-column: span 4;
@@ -44,7 +48,7 @@ header {
     }
 
     .bottom {
-        min-height: 50vh;
+        // min-height: 50vh;
 
         .salladImg {
             width: 100%;
@@ -66,3 +70,4 @@ header {
         }
     }
 }
+
