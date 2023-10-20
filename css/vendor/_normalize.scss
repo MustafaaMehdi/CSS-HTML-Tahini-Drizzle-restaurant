@@ -197,7 +197,10 @@ textarea {
     font: inherit;
 }
 
-
+p {
+    margin-block-start: 50px;
+    margin-block-end: 50px ;
+}
 
 details {
     display: block;
