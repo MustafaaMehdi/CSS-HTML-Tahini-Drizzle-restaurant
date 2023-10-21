@@ -198,8 +198,8 @@ textarea {
 }
 
 p {
-    margin-block-start: 50px;
-    margin-block-end: 50px ;
+    margin-block-start: 25px;
+    margin-block-end: 25px ;
 }
 
 details {
@@ -218,4 +218,8 @@ template {
 
 [hidden] {
     display: none;
+}
+
+ul {
+    list-style-type: none;
 }
