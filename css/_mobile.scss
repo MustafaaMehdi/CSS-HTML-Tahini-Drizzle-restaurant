@@ -1,6 +1,7 @@
 body {
   background-color: rgb(237, 253, 8);
   color: white;
+  margin: 0;
 }
 
 main {
@@ -12,27 +13,34 @@ main {
 }
 
 header {
-  grid-column: span 5;
+  display: grid;
   background-color: #000000;
-
+  grid-column: span 5;
+  padding: 16px;
+  // padding: 20px;
+  // // z-index: 2;
+  // position: relative;
+  // // right: 0;
+}
   input {
-    position: fixed;
+    // position: absolute;
     top: 20px;
-    right: 20px;
-    z-index: 2;
+    left: 10px;
+    z-index: 5;
     width: 35px;
     height: 35px;
     opacity: 0;
   }
+
   .burgerMenu {
-    
+    // position: absolute;
   .burgerMenu__button {
     width: 35px;
     height: 35px;
     background: transparent;
     border: 0;
-    position: fixed;
-    right: 20px;
+    position: absolute;
+    left: 10px;
     top: 20px;
     z-index: 4;
     pointer-events: none;
@@ -41,23 +49,24 @@ header {
       display: block;
       width: 20px;
       height: 3px;
-      background-color: #00FF38;
+      background-color: #FFF135;
       border-radius: 6px;
       margin-bottom: 4px;
       z-index: 2;
+      // position: fixed; //verkar inte behövas
     }
     
   }
   .navPage {
     position: fixed;
-    top: 0;
+    // top: 100px;
     left: 0;
-    background-color: rgba($color: #aa0894, $alpha: 0.5);
+    background-color: rgba(170, 8, 148, 1);
     height: 100vh;
     width: 100vw;
     visibility: hidden;
     opacity: 0;
-    transition: all 1.337s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 1;
     ul {
       margin: 0;
@@ -68,6 +77,7 @@ header {
       justify-content: space-evenly;
       text-align: center;
     }
+
 
   }
 }
@@ -90,16 +100,25 @@ header {
   input:checked + .burgerMenu nav {
     visibility: visible;
     opacity: 1;
+    position: fixed;
+    // top: 80px;
+
   }
   .headerTitle { //bytte namnn
-    // letter-spacing: 50px; //Mellanrum i headern  
+    letter-spacing: 10px; //Mellanrum i headern  
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    position: absolute; //den är sticky
+    top: 22px;
+    left: 90px;
+    z-index: 4;
+    margin: 0;
   }
-}
+
 
 .page1 {
   grid-column: span 5;
+  // margin-top: 80px;
   // height: 100vh;
   // width: 100vw;
 
@@ -121,6 +140,7 @@ header {
       .pageTitle {
           grid-column: span 5;
           background-color: #000000;
+          // position: relative;
 
         
           .Tahini {

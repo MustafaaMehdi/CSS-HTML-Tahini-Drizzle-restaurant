@@ -6,13 +6,17 @@
 
 body {
   font-family: 'Jockey One', sans-serif;
+  // .socondaryFont {
+  //   font-family: 'Roboto Condensed', sans-serif;
+  // }
 }
 
-.socondaryFont {
-  font-family: 'Roboto Condensed', sans-serif;
+
+
+@media screen and (min-width: 960px) {
+  @import "tablet";
 }
 
 @media screen and (min-width: 1280px) {
   @import "desktop";
 }
-

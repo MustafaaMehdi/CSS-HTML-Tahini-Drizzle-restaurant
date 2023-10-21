@@ -1,150 +1,176 @@
 body {
     background-color: rgb(237, 253, 8);
     color: white;
-  }
-  
-  main {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    margin: 0;
+    font-family: Arial, sans-serif;
   }
   
   header {
-    grid-column: span 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #000000;
-    .burgerMenu {
-    }
-    .navTitle {
-      // letter-spacing: 50px; //Mellanrum i headern  
-      text-transform: uppercase;
-      font-size: 2rem;
-    }
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  input {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 5;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+  }
+  
+  .burgerMenu__button {
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 0;
+    position: relative;
+    z-index: 3;
+  }
+  
+  .burgerMenu__button--span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #FFF135;
+    border-radius: 6px;
+    margin-bottom: 4px;
+  }
+  
+  .navPage {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: rgba(170, 8, 148, 1);
+    height: 100vh;
+    width: 100vw;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+  }
+  
+  input:checked + .burgerMenu button span {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input:checked + .burgerMenu button span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  input:checked + .burgerMenu button span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  input:checked + .burgerMenu button span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  input:checked + .burgerMenu nav {
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    top: 80px;
+  }
+  
+  .headerTitle {
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: white;
+    margin-right: auto;
   }
   
   .page1 {
-    grid-column: span 5;
-    // min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
   
-    .top,
-    .bottom {
-        display: grid;
-        // grid-column: span 5;
-        // gap: 16px;
-        // grid-template-columns: repeat(5, 1fr);
-        
+  .pageTitle {
+    background-color: #000000;
+  }
   
-    }
+  .Tahini {
+    position: relative;
+    text-transform: uppercase;
+    color: #00FF38;
+    font-size: 9rem;
+    z-index: 0;
+    padding: 0px 16px 0px 16px;
+    margin-bottom: 0px;
+  }
   
-    .top {
-        // min-width: 50vh;
-        // max-width: 100vh;
+  .drizzle {
+    position: absolute;
+    font-size: 3.46rem;
+    left: 192px;
+    top: -25px;
+    color: #AB76FF;
+  }
   
-        .pageTitle {
-            grid-column: span 5;
-            background-color: #000000;
+  .chickpeas {
+    position: absolute;
+    color: #FFF135;
+    font-size: 3.5rem;
+    left: 25px;
+    top: 110px;
+    z-index: -1;
+  }
   
-          
-            .Tahini {
-              position: relative;
-              text-transform: uppercase;
-              color: #00FF38;
-              font-size: 9rem;
-              text-align: center;
-              z-index: 1;
-              // padding: 0px 16px 0px 16px; 
-              margin-bottom: 0px;
+  .pageText {
+    font-size: 2.5rem;
+    color: #00FF38;
+    background-color: #000000;
+    padding: 0 16px 0 16px;
+  }
   
-              .drizzle {
-                position: absolute;
-                font-size: 3.46rem;
-                right: 1.34rem;
-                // top: -1.5rem;
-                color: #AB76FF;
-                // text-transform: uppercase;
-      
-              }
-              .chickpeas {
-                position: absolute;
-                color: #FFF135;
-                font-size: 3.5rem;
-                right: 7.4rem;
-                top: 7rem;
-                // text-transform: uppercase;
-                z-index: -1;
-              }
-            }
-    
+  .bottom .salladImg {
+    width: 100%;
+    height: 100%;
   
-  
-          // .Tahini {
-          //   position: absolute;
-          //   text-transform: uppercase;
-          //   position: relative;
-          //   color: #00FF38;
-          //   font-size: 11rem;
-          //   text-align: center;
-          //   z-index: 1;
-          // }
-  
-          // .drizzle {
-          //   position: relative;
-          //   font-size: 4.2rem;
-          //   right: 205px;
-          //   bottom: 130px;
-          //   color: #AB76FF;
-          //   text-transform: uppercase;
-  
-          // }
-          // .chickpeas {
-          //   position: relative;
-          //   color: #FFF135;
-          //   font-size: 4.2rem;
-          //   right: 590px;
-          //   top: 30px;
-          //   text-transform: uppercase;
-          //   z-index: -1;
-          // }
-        }
-    }
-  
-    .pageText {
-        grid-column: span 5;
-        font-size: 2.5rem;
-        color: #00FF38;
-        background-color: #000000;
-        padding: 0px 16px 0px 16px;
-    }
-  
-    .bottom {
-        // min-height: 50vh;
-  
-        .salladImg {
-            width: 100%;
-            height: 100%;
-            grid-column: span 5;
-            // object-fit: contain; //Salladbild cover
-            img {
-                width: 100%;
-                height: 100%;
-                // object-fit: contain;
-            }
-        }
-  
-        .pageText {
-            // grid-column: span 5;
-            font-size: 2.5rem;
-            background-color: #fff;
-            color: #AB76FF;
-            margin: 16px 0px 16px 0px;
-            padding: 0px 16px 0px 16px;
-            .pageText__explore {
-              color: #000000;
-              margin: 0px;
-              text-align: right;
-              text-transform: uppercase;
-            }
-        }
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
   
+  .bottom .pageText {
+    font-size: 2.5rem;
+    background-color: #fff;
+    color: #AB76FF;
+    margin: 16px 0 16px 0;
+    padding: 0 16px 0 16px;
   
+    .pageText__explore {
+      color: #000000;
+      margin: 0;
+      text-align: right;
+      text-transform: uppercase;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 10px;
+    }
+  
+    .burgerMenu__button {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .burgerMenu__button--span {
+      width: 15px;
+    }
+}
