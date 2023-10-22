@@ -10,18 +10,19 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-}
 
-header {
-  display: grid;
-  background-color: #000000;
-  grid-column: span 5;
-  padding: 16px;
-  // padding: 20px;
-  // // z-index: 2;
-  // position: relative;
-  // // right: 0;
-}
+
+  header {
+    display: grid;
+    background-color: #000000;
+    grid-column: span 5;
+    padding: 16px;
+    // padding: 20px;
+    // // z-index: 2;
+    // position: relative;
+    // // right: 0;
+  }
+
   input {
     // position: absolute;
     top: 20px;
@@ -33,78 +34,86 @@ header {
   }
 
   .burgerMenu {
+
     // position: absolute;
-  .burgerMenu__button {
-    width: 35px;
-    height: 35px;
-    background: transparent;
-    border: 0;
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    z-index: 4;
-    pointer-events: none;
+    .burgerMenu__button {
+      width: 35px;
+      height: 35px;
+      background: transparent;
+      border: 0;
+      position: absolute;
+      left: 10px;
+      top: 20px;
+      z-index: 4;
+      pointer-events: none;
 
-    .burgerMenu__button--span {
-      display: block;
-      width: 20px;
-      height: 3px;
-      background-color: #FFF135;
-      border-radius: 6px;
-      margin-bottom: 4px;
-      z-index: 2;
-      // position: fixed; //verkar inte behövas
-    }
-    
-  }
-  .navPage {
-    position: fixed;
-    // top: 100px;
-    left: 0;
-    background-color: rgba(170, 8, 148, 1);
-    height: 100vh;
-    width: 100vw;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
-    z-index: 1;
-    ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: space-evenly;
-      text-align: center;
+      .burgerMenu__button--span {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background-color: #FFF135;
+        border-radius: 6px;
+        margin-bottom: 4px;
+        z-index: 2;
+        // position: fixed; //verkar inte behövas
+      }
+
     }
 
+    .navPage {
+      position: fixed;
+      // top: 100px;
+      left: 0;
+      background-color: rgba(170, 8, 148, 1);
+      height: 100vh;
+      width: 100vw;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
+      z-index: 1;
 
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+
+
+    }
   }
-}
 
-  input:checked + .burgerMenu button span {
+  input:checked+.burgerMenu button span {
     position: absolute;
     transition: all 0.3s ease-in-out;
   }
-  input:checked + .burgerMenu button span:nth-child(2) {
+
+  input:checked+.burgerMenu button span:nth-child(2) {
     opacity: 0;
   }
-  input:checked + .burgerMenu button span:nth-child(1) {
+
+  input:checked+.burgerMenu button span:nth-child(1) {
     transform: rotate(45deg);
   }
-  input:checked + .burgerMenu button span:nth-child(3) {
+
+  input:checked+.burgerMenu button span:nth-child(3) {
     transform: rotate(-45deg);
   }
 
 
-  input:checked + .burgerMenu nav {
+  input:checked+.burgerMenu nav {
     visibility: visible;
     opacity: 1;
     position: fixed;
     // top: 80px;
 
   }
-  .headerTitle { //bytte namnn
+
+  .headerTitle {
+    //bytte namnn
     letter-spacing: 10px; //Mellanrum i headern  
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -116,62 +125,63 @@ header {
   }
 
 
-.page1 {
-  grid-column: span 5;
-  // margin-top: 80px;
-  // height: 100vh;
-  // width: 100vw;
+  .page1 {
+    grid-column: span 5;
+    // margin-top: 80px;
+    // height: 100vh;
+    // width: 100vw;
 
-  .top,
-  .bottom {
+    .top,
+    .bottom {
       display: grid;
       // grid-column: span 5;
       // gap: 16px;
       // grid-template-columns: repeat(5, 1fr);
-      
 
-  }
 
-  .top {
+    }
+
+    .top {
       // min-width: 50vw;
       // max-width: 100vh;
       z-index: 3;
 
       .pageTitle {
-          grid-column: span 5;
-          background-color: #000000;
-          // position: relative;
+        grid-column: span 5;
+        background-color: #000000;
+        // position: relative;
 
-        
-          .Tahini {
-            position: relative;
-            text-transform: uppercase;
-            color: #00FF38;
-            font-size: 9rem;
-            z-index: 0;
-            padding: 0px 16px 0px 16px; 
-            margin-bottom: 0px;
 
-            .drizzle {
-              position: absolute;
-              font-size: 3.46rem;
-              left: 192px;
-              top: -25px;
-              color: #AB76FF;
-              // text-transform: uppercase; //verkar inte behövs ju med den inhering
-    
-            }
-            .chickpeas {
-              position: absolute;
-              color: #FFF135;
-              font-size: 3.5rem;
-              left: 25px;
-              top: 110px;
-              // text-transform: uppercase; //som ovan
-              z-index: -1;
-            }
+        .Tahini {
+          position: relative;
+          text-transform: uppercase;
+          color: #00FF38;
+          font-size: 9rem;
+          z-index: 0;
+          padding: 0px 16px 0px 16px;
+          margin-bottom: 0px;
+
+          .drizzle {
+            position: absolute;
+            font-size: 3.46rem;
+            left: 192px;
+            top: -25px;
+            color: #AB76FF;
+            // text-transform: uppercase; //verkar inte behövs ju med den inhering
+
           }
-  
+
+          .chickpeas {
+            position: absolute;
+            color: #FFF135;
+            font-size: 3.5rem;
+            left: 25px;
+            top: 110px;
+            // text-transform: uppercase; //som ovan
+            z-index: -1;
+          }
+        }
+
 
 
         // .Tahini {
@@ -203,45 +213,101 @@ header {
         //   z-index: -1;
         // }
       }
-  }
+    }
 
-  .pageText {
+    .pageText {
       grid-column: span 5;
       font-size: 2.5rem;
       color: #00FF38;
       background-color: #000000;
       padding: 0 16px 0 16px;
-  }
+    }
 
-  .bottom {
+    .bottom {
       // min-height: 50vh;
 
       .salladImg {
+        width: 100%;
+        height: 100%;
+        grid-column: span 5;
+
+        // object-fit: contain; //Salladbild cover
+        img {
           width: 100%;
           height: 100%;
-          grid-column: span 5;
-          // object-fit: contain; //Salladbild cover
-          img {
-              width: 100%;
-              height: 100%;
-              // object-fit: contain;
-          }
+          // object-fit: contain;
+        }
       }
 
       .pageText {
-          // grid-column: span 5;
-          font-size: 2.5rem;
-          background-color: #fff;
-          color: #AB76FF;
-          margin: 16px 0 16px 0;
-          padding: 0 16px 0 16px;
-          .pageText__explore {
-            color: #000000;
-            margin: 0;
-            text-align: right;
-            text-transform: uppercase;
-          }
+        // grid-column: span 5;
+        font-size: 2.5rem;
+        background-color: #fff;
+        color: #AB76FF;
+        margin: 16px 0 16px 0;
+        padding: 0 16px 0 16px;
+
+        .pageText__explore {
+          color: #000000;
+          margin: 0;
+          text-align: right;
+          text-transform: uppercase;
+        }
       }
+    }
+
+
   }
+
+  .page2 {
+    grid-template-columns: repeat(5, 1fr);
+    grid-column: span 5;
+
+    .foodMenu_section {
+      // display: inherit;
+      color: #000000;
+      background-color: white;
+      text-align: center;
+
+      .foodMenu_section--item {
+        // display: inherit;
+        // text-align: center;
+        font-size: 4rem;
+        text-transform: uppercase;
+      }
+
+      .foodMenu_section--itemDescription {
+        font-family: $secondaryFont;
+        font-size: 5;
+      }
+    }
+  }
+
+  // .page2 {
+  //   display: grid;
+  //   grid-column: span 5;
+
+  //   .foodMenu__item {
+  //     // display: flex;
+  //     background-color: #000000;
+  //     color: #000000;
+  //   }
+  // }
 }
 
+// .page2 {
+//   // display: grid;
+//   .foodMenu {
+//   // display: grid;
+//   display: grid;
+//   grid-column: span 5;
+//   color: #000000;
+//   background-color: white;
+//   .footMenu__wrapper {
+//     // display: grid;
+//     // grid-column: span 5;
+//     // color: #000000;
+//     // background-color: white;
+//   }
+// }
+// }

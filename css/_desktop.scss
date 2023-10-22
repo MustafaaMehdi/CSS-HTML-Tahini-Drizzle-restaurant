@@ -74,3 +74,11 @@ header {
     }
 }
 
+.page2 {
+    grid-column: span 5;
+    .footMenu__wrapper {
+      display: flex;
+      color: #000000;
+      background-color: white;
+    }
+}
