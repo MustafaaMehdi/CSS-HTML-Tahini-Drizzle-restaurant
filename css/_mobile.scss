@@ -218,7 +218,7 @@ main {
     padding-left: 16px;
     padding-right: 16px;
     
-    .foodMenu_image img {
+    .foodMenu_image {
       width: 100%;
       height: 100%;
     }
@@ -250,8 +250,42 @@ main {
 
         .foodMenu_section--itemPrice {
           font-size: 3rem;
+          position: relative;
         }
 
+        .itemLabel {
+          position: absolute;
+          right: 2rem;
+          text-transform: uppercase;
+          margin-block: 10px;
+          display: inline-block;
+          padding: 0 12px;
+
+        }
+        .new {
+          background-color: rgb(136, 30, 120);
+          transform: rotate(3deg);
+          span {
+            // display: block;
+            transform: rotate(-3deg);
+          }
+        }
+        .vegan {
+          background-color: rgb(20, 150, 9);
+          transform: rotate(-3deg);
+          span {
+            // display: block;
+            transform: rotate(3deg);
+          }
+        }
+        .popular {
+          background-color: rgb(235, 221, 34);
+          transform: rotate(-1deg);
+          span {
+            // display: block;
+            transform: rotate(1deg);
+          }
+        }
       }
     }
   }
