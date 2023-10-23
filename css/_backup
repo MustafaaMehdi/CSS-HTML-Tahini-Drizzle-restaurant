@@ -1,6 +1,7 @@
 body {
   background-color: rgb(237, 253, 8);
   color: white;
+  margin: 0;
 }
 
 main {
@@ -9,17 +10,17 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
-
+  grid-column: span 5;
 
   header {
-    display: grid;
+    // display: grid;
     background-color: #000000;
     grid-column: span 5;
     padding: 16px;
 
   }
 
-  .menuClick {
+  input {
     top: 20px;
     left: 10px;
     z-index: 5;
@@ -212,11 +213,12 @@ main {
   }
 
   .page2 {
+    // display: grid;
     // grid-template-columns: repeat(5, 1fr);
+    display: inherit;
     grid-column: span 5;
-    // padding-left: 16px;
-    // padding-right: 16px;
-    padding: 0 16px ;
+    padding-left: 16px;
+    padding-right: 16px;
     
     .foodMenu_image {
       width: 100%;
@@ -290,48 +292,12 @@ main {
     }
 
     .page3 {
-      grid-column: span 5;
       background-color: #00FF38;
-      color: #000000;
-      border-top: 16px solid white;
-      padding: 0 16px;
+      display: inherit;
+      grid-column: span 5;
       .booking {
-        form {
-          // display: flex;
-          // flex-direction: column;
-        }
-
-      label {
-        display:inline-block;
-        width: auto;
-        text-align: left;
-        padding: 8px 0;
+        display: inherit;
       }
-
-
-      input[type=text], select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
     }
-
-
-    input[type=submit], input[type=reset] {
-      width: 40%;
-      background-color: #04AA6D;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    }
-    
   }
 
-}
