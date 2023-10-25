@@ -6,7 +6,7 @@ body {
 main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  // gap: 16px;
+  // gap: 16px; 
 
 
   header {
@@ -314,22 +314,42 @@ main {
 
     .contactInfo {
       position: relative;
-      background-image: url(/assets/photos/wineTable-min.jpg);
-      min-width: 30vw;
-      min-height: 30vh;
-      background-size:cover;
-      background-position: center;
-      top: 0;
-      left: 0;
-      filter: blur(3px);
+
+      .contactInfo__bg {
+        // position: relative;
+        filter: blur(3px);
+        background-image: url(/assets/photos/wineTable-min.jpg);
+        min-width: 30vw;
+        min-height: 30vh;
+        background-size: cover;
+        background-position: center;
+        top: 0;
+        left: 0;
+      }
 
       .contactInfo__bg--text {
+        position: absolute;
+        bottom: 50px;
+        left: 2em;
+        // transform: translate(-50%, -50%);
+        font-size: 1rem;
 
+        .material-symbols-outlined {
+
+          font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+            color: #27BCEB;
+            font-size: 2rem;
+        }
       }
     }
+
     // .contactInfo {
     //   position: relative;
-      
+
     //   .contactInfo__bg {
     //     background-image: url(/assets/photos/wineTable-min.jpg);
     //     min-width: 30vw;
@@ -353,14 +373,6 @@ main {
     font-family: $secondaryFont;
     text-align: center;
 
-
-    .material-symbols-outlined {
-      font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-    }
 
   }
 }
