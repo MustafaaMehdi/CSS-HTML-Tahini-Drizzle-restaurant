@@ -4,16 +4,12 @@ body {
 }
 
 main {
-  // height: 100vh;
-  // width: 100vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   // gap: 16px;
 
 
   header {
-    // display: inherit;
-    // background-color: #000000;
     grid-column: span 5;
     padding: 16px;
 
@@ -29,8 +25,6 @@ main {
   }
 
   .burgerMenu {
-
-    // position: absolute;
     .burgerMenu__button {
       width: 35px;
       height: 35px;
@@ -49,14 +43,12 @@ main {
         background-color: #FFF135;
         border-radius: 6px;
         margin-bottom: 4px;
-        // z-index: 2;
       }
 
     }
 
     .navPage {
       position: fixed;
-      // top: 100px;
       left: 0;
       background-color: rgba(170, 8, 148, 1);
       height: 100vh;
@@ -102,15 +94,13 @@ main {
     visibility: visible;
     opacity: 1;
     position: fixed;
-    // top: 80px;
 
   }
 
   .headerTitle {
-    //bytte namnn
-    letter-spacing: 10px; //Mellanrum i headern  
+    letter-spacing: 10px;
     text-transform: uppercase;
-    position: absolute; //den är sticky
+    position: absolute;
     top: 22px;
     left: 90px;
     z-index: 4;
@@ -119,34 +109,18 @@ main {
 
 
   .page1 {
-    // display: inherit;
     grid-column: span 5;
-    // margin-top: 80px;
-    // height: 100vh;
-    // width: 100vw;
     border-top: 16px solid #FFF135;
 
     .top,
     .bottom {
-      // display: grid;
       grid-column: span 5;
-      // gap: 16px;
-      // grid-template-columns: repeat(5, 1fr);
-
-
     }
 
     .top {
-      // min-width: 50vw;
-      // max-width: 100vh;
       z-index: 3;
 
       .pageTitle {
-        // grid-column: span 5;
-        // background-color: #000000;
-        // position: relative;
-
-
         .Tahini {
           position: relative;
           text-transform: uppercase;
@@ -178,10 +152,8 @@ main {
     }
 
     .pageText {
-      // grid-column: span 5;
       font-size: 2.5rem;
       color: #00FF38;
-      // background-color: #000000;
       padding: 0 16px;
     }
 
@@ -216,11 +188,7 @@ main {
   }
 
   .page2 {
-    // grid-template-columns: repeat(5, 1fr);
     grid-column: span 5;
-    // padding-left: 16px;
-    // padding-right: 16px;
-    // padding: 0 16px ;
     background-color: #FFF135;
     padding: 16px;
 
@@ -275,7 +243,6 @@ main {
         transform: rotate(3deg);
 
         span {
-          // display: block;
           transform: rotate(-3deg);
         }
       }
@@ -285,7 +252,6 @@ main {
         transform: rotate(-3deg);
 
         span {
-          // display: block;
           transform: rotate(3deg);
         }
       }
@@ -295,7 +261,6 @@ main {
         transform: rotate(-1deg);
 
         span {
-          // display: block;
           transform: rotate(1deg);
         }
       }
@@ -310,10 +275,10 @@ main {
     padding: 0 16px;
 
     .booking {
-      form {
-        // display: flex;
-        // flex-direction: column;
-      }
+      // form {
+      //   // display: flex;
+      //   // flex-direction: column;
+      // }
 
       label {
         display: inline-block;
@@ -347,11 +312,39 @@ main {
       }
     }
 
-    .booking__contactImage {
-      height: 100%;
-      width: 100%;
-      filter: blur(2px);
+    .contactInfo {
+      position: relative;
+      background-image: url(/assets/photos/wineTable-min.jpg);
+      min-width: 30vw;
+      min-height: 30vh;
+      background-size:cover;
+      background-position: center;
+      top: 0;
+      left: 0;
+      filter: blur(3px);
+
+      .contactInfo__bg--text {
+
+      }
     }
+    // .contactInfo {
+    //   position: relative;
+      
+    //   .contactInfo__bg {
+    //     background-image: url(/assets/photos/wineTable-min.jpg);
+    //     min-width: 30vw;
+    //     min-height: 30vh;
+    //     background-size:cover;
+    //     background-position: center;
+    //     top: 0;
+    //     left: 0;
+    //     filter: blur(3px);
+    //   }
+
+    //   .contactInfo__bg--text {
+
+    //   }
+    // }
   }
 
   .cookieBanner {

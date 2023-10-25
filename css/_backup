@@ -1,7 +1,6 @@
 body {
-  background-color: rgb(237, 253, 8);
+  background-color: rgb(0, 0, 0);
   color: white;
-  margin: 0;
 }
 
 main {
@@ -9,18 +8,18 @@ main {
   // width: 100vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  grid-column: span 5;
+  // gap: 16px;
+
 
   header {
-    // display: grid;
-    background-color: #000000;
+    // display: inherit;
+    // background-color: #000000;
     grid-column: span 5;
     padding: 16px;
 
   }
 
-  input {
+  .menuClick {
     top: 20px;
     left: 10px;
     z-index: 5;
@@ -111,7 +110,6 @@ main {
     //bytte namnn
     letter-spacing: 10px; //Mellanrum i headern  
     text-transform: uppercase;
-    font-size: 1.5rem;
     position: absolute; //den är sticky
     top: 22px;
     left: 90px;
@@ -121,15 +119,17 @@ main {
 
 
   .page1 {
+    // display: inherit;
     grid-column: span 5;
     // margin-top: 80px;
     // height: 100vh;
     // width: 100vw;
+    border-top: 16px solid #FFF135;
 
     .top,
     .bottom {
-      display: grid;
-      // grid-column: span 5;
+      // display: grid;
+      grid-column: span 5;
       // gap: 16px;
       // grid-template-columns: repeat(5, 1fr);
 
@@ -142,8 +142,8 @@ main {
       z-index: 3;
 
       .pageTitle {
-        grid-column: span 5;
-        background-color: #000000;
+        // grid-column: span 5;
+        // background-color: #000000;
         // position: relative;
 
 
@@ -178,15 +178,16 @@ main {
     }
 
     .pageText {
-      grid-column: span 5;
+      // grid-column: span 5;
       font-size: 2.5rem;
       color: #00FF38;
-      background-color: #000000;
-      padding: 0 16px 0 16px;
+      // background-color: #000000;
+      padding: 0 16px;
     }
 
     .bottom {
       display: inherit;
+
       .salladImg img {
         width: 100%;
         height: 100%;
@@ -194,11 +195,13 @@ main {
 
       .pageText {
         // grid-column: span 5;
-        font-size: 2.5rem;
+        // font-size: 2.5rem;
         background-color: #fff;
         color: #AB76FF;
-        margin: 16px 0 16px 0;
-        padding: 0 16px 0 16px;
+        // margin: 16px 0 16px 0;
+        // padding: 0 16px 0 16px;
+        border-top: 16px solid #FFF135;
+        border-bottom: 16px solid #FFF135;
 
         .pageText__explore {
           color: #000000;
@@ -213,17 +216,19 @@ main {
   }
 
   .page2 {
-    // display: grid;
     // grid-template-columns: repeat(5, 1fr);
-    display: inherit;
     grid-column: span 5;
-    padding-left: 16px;
-    padding-right: 16px;
-    
+    // padding-left: 16px;
+    // padding-right: 16px;
+    // padding: 0 16px ;
+    background-color: #FFF135;
+    padding: 16px;
+
     .foodMenu_image {
       width: 100%;
       height: 100%;
     }
+
     // .foodMenu_wrapper {
     //   // padding: 16px;
 
@@ -232,72 +237,137 @@ main {
     //       height: 100%;
     //     }
     //   }
-      .foodMenu_section {
-        color: #000000;
-        background-color: white;
-        text-align: center;
-        border-bottom: 1px solid black;
-        border-top: 1px solid black;
+    .foodMenu_section {
+      color: #000000;
+      background-color: white;
+      text-align: center;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
 
-        .foodMenu_section--item {
-          font-size: 4rem;
-          text-transform: uppercase;
-        }
+      .foodMenu_section--item {
+        font-size: 4rem;
+        text-transform: uppercase;
+      }
 
-        .foodMenu_section--itemDescription {
-          font-family: $secondaryFont;
-          font-size: 2rem;
-          margin: 15px;
-        }
+      .foodMenu_section--itemDescription {
+        font-family: $secondaryFont;
+        font-size: 2rem;
+        margin: 15px;
+      }
 
-        .foodMenu_section--itemPrice {
-          font-size: 3rem;
-          position: relative;
-        }
+      .foodMenu_section--itemPrice {
+        font-size: 3rem;
+        position: relative;
+      }
 
-        .itemLabel {
-          position: absolute;
-          right: 2rem;
-          text-transform: uppercase;
-          margin-block: 10px;
-          display: inline-block;
-          padding: 0 12px;
+      .itemLabel {
+        position: absolute;
+        right: 2rem;
+        text-transform: uppercase;
+        margin-block: 10px;
+        display: inline-block;
+        padding: 0 12px;
 
-        }
-        .new {
-          background-color: rgb(136, 30, 120);
-          transform: rotate(3deg);
-          span {
-            // display: block;
-            transform: rotate(-3deg);
-          }
-        }
-        .vegan {
-          background-color: rgb(20, 150, 9);
+      }
+
+      .new {
+        background-color: rgb(136, 30, 120);
+        transform: rotate(3deg);
+
+        span {
+          // display: block;
           transform: rotate(-3deg);
-          span {
-            // display: block;
-            transform: rotate(3deg);
-          }
-        }
-        .popular {
-          background-color: rgb(235, 221, 34);
-          transform: rotate(-1deg);
-          span {
-            // display: block;
-            transform: rotate(1deg);
-          }
         }
       }
-    }
 
-    .page3 {
-      background-color: #00FF38;
-      display: inherit;
-      grid-column: span 5;
-      .booking {
-        display: inherit;
+      .vegan {
+        background-color: rgb(20, 150, 9);
+        transform: rotate(-3deg);
+
+        span {
+          // display: block;
+          transform: rotate(3deg);
+        }
+      }
+
+      .popular {
+        background-color: rgb(235, 221, 34);
+        transform: rotate(-1deg);
+
+        span {
+          // display: block;
+          transform: rotate(1deg);
+        }
       }
     }
   }
 
+  .page3 {
+    grid-column: span 5;
+    background-color: #00FF38;
+    color: #000000;
+    border-top: 16px solid white;
+    padding: 0 16px;
+
+    .booking {
+      form {
+        // display: flex;
+        // flex-direction: column;
+      }
+
+      label {
+        display: inline-block;
+        width: auto;
+        text-align: left;
+        padding: 8px 0;
+      }
+
+
+      input[type=text],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+
+      input[type=submit],
+      input[type=reset] {
+        width: 40%;
+        background-color: #04AA6D;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+
+    .booking__contactImage {
+      height: 100%;
+      width: 100%;
+      filter: blur(2px);
+    }
+  }
+
+  .cookieBanner {
+    grid-column: span 5;
+    background-color: #AB76FF;
+    font-family: $secondaryFont;
+    text-align: center;
+
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+
+  }
+}
