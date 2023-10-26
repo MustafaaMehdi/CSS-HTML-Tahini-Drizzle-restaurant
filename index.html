@@ -20,9 +20,8 @@
 <body>
   <main>
     <header>
-      <input type="checkbox" class="menuClick">
+      <input type="checkbox" class="menuTrigger">
       <div class="burgerMenu">
-
         <button class="burgerMenu__button">
           <span class="burgerMenu__button--span"></span>
           <span class="burgerMenu__button--span"></span>
@@ -30,22 +29,20 @@
 
           <nav class="navPage">
             <ul>
-              <li><a href="#">hem</a></li>
-              <li>Kontakt</li>
-              <li>Om oss</li>
+              <li><a href="#" target="_blank">hem</a></li>
+              <li><a href="#" target="_blank">Kontakt</a></li>
+              <li><a href="#" target="_blank">Om oss</a></li>
             </ul>
           </nav>
         </button>
       </div>
-
-      <h1 class="headerTitle"> Tough Cookie</h1>
-
+      <h1 class="headerTitle">Tough Cookie</h1>
     </header>
 
     <div class="page1">
-      <section class="top">
-        <article class="pageTitle">
-          <p class="Tahini">Tahini <span class="drizzle">drizzle </span><span class="chickpeas">chickpeas</span></p>
+      <section class="page1__top">
+        <article class="page1__title">
+          <p class="title__tahini">Tahini <span class="title__drizzle">drizzle </span><span class="title__chickpeas">chickpeas</span></p>
         </article>
         <article class="pageText">
           <p>Main course hemp seeds Southern Italian shiitake mushrooms a delicious meal banana bread lemon tahini
@@ -53,11 +50,11 @@
             kale bite sized ghost pepper one bowl mediterranean luxury bowl cayenne Thai sun pepper.</p>
         </article>
       </section>
-      <section class="bottom">
+      <section class="page1__bottom">
 
-        <aside class="salladImg">
-          <img src="assets/photos/sallad.jpg" height="400px" width="450px" alt="Sallad head">
-        </aside>
+        <!-- <aside class="page1__bottom--salladImg"> -->
+          <img class="page1__bottom--salladImg" src="assets/photos/sallad-min.jpg" height="400px" width="450px" alt="Sallad head" loading="lazy">
+        <!-- </aside> -->
         <article class="pageText">
           <p>Crispy iceberg lettuce Caribbean red habanero blueberry chia seed jam overflowing berries roasted butternut
             squash basmati thyme hummus falafel bowl cozy butternut cilantro lime vinaigrette heat mint potato chocolate
@@ -69,8 +66,8 @@
 
     <div class="page2">
       <section class="foodMenu_wrapper">
-        <img class="foodMenu_image" src="assets/photos/Veggiesallad.jpg" height="450px" width="360px"
-          alt="a bowl of sallad">
+        <img class="foodMenu_image" src="assets/photos/Veggiesallad-min.jpg" height="450px" width="360px"
+          alt="a bowl of sallad" loading="lazy">
         <ul class="foodMenu_section">
           <li class="foodMenu_section--item">Halloumi moklieh</li>
           <li class="itemLabel new"><span>New!</span></li>
@@ -82,7 +79,7 @@
           <li class="foodMenu_section--itemDescription">Green lentis with rice and fried onion</li>
           <li class="foodMenu_section--itemPrice">135 kr</li>
         </ul>
-        <img class="foodMenu_image" src="assets/photos/hummus.jpg" height="350px" width="390px" alt="a bowl of hummus">
+        <img class="foodMenu_image" src="assets/photos/hummus-min.jpg" height="350px" width="390px" alt="a bowl of hummus" loading="lazy">
         <ul class="foodMenu_section">
           <li class="foodMenu_section--item">Chiar & laban</dt>
           <li class="foodMenu_section--itemDescription">Lebanese spicy yoghurt with chopped cucumber</li>
@@ -99,8 +96,8 @@
           <li class="foodMenu_section--itemDescription">Smoked chopped aubergine, sesame paste, garlic and lemon</li>
           <li class="foodMenu_section--itemPrice">175 kr</li>
           </ul>
-        <img class="foodMenu_image" src="assets/photos/chiarlaban.jpg" height="450px" width="360px"
-          alt="3 bowls of side orders">
+        <img class="foodMenu_image" src="assets/photos/chiarlaban-min.jpg" height="450px" width="360px"
+          alt="3 separate bowls of chiar laban, mojaddara and hummus" loading="lazy">
         <ul class="foodMenu_section">
           <li class="foodMenu_section--item">Ardishoki</li>
           <li class="itemLabel popular"><span>Popular</span></li>
@@ -118,8 +115,8 @@
     </div>
 
     <div class="page3">
-      <section class="booking">
-        <h2>Book table</h2>
+      <section class="page3__booking">
+        <h2 class="page3__header">Book your table</h2>
         <form>
           <label for="name">Name:</label>
           <input type="text" name="name" id="name">
@@ -128,7 +125,7 @@
           <label for="phone-number">Phone number:</label>
           <input type="text" name="phone-number" id="phone-number">
           <label for="date">Date</label>
-          <input type="text" name="date" id="date">
+          <input type="date" name="date" id="date">
           <label for="partysize">Party size</label>
           <input type="text" name="partysize" id="partysize">
           <label for="allergies">Allergies</label>
@@ -137,13 +134,13 @@
           <input type="reset" value="Cancel">
         </form>
 
-        <div class="contactInfo">
+        <div class="page3__contactInfo">
           <div class="contactInfo__bg"></div>
           <div class="contactInfo__bg--text">
             <ul>
               <li><p><span class="material-symbols-outlined">call</span><a href="tel:+4681234567">+46 8 123 4567</a></p></li>
               <li><p><span class="material-symbols-outlined">alternate_email</span><a href="mailto:book@toughcookie.com">book@toughcookie.com</a></p></li>
-              <li><p><span class="material-symbols-outlined">location_on</span><a href="https://maps.google.com/maps?q=">Brända Tomten 111 31 Stockholm</a></p></li>
+              <li><p><span class="material-symbols-outlined">location_on</span><a href="https://maps.google.com/maps?q=" target="_blank">Brända Tomten 111 31 Stockholm</a></p></li>
             </ul>
           </div>
         </div>

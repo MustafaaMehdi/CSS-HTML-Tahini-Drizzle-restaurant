@@ -1,137 +1,148 @@
 body {
   background-color: rgb(0, 0, 0);
   color: white;
+  font-size: 1.8rem;
 }
+
 
 main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  // gap: 16px; 
 
 
   header {
     grid-column: span 5;
-    padding: 16px;
 
-  }
-
-  .menuClick {
-    top: 20px;
-    left: 10px;
-    z-index: 5;
-    width: 35px;
-    height: 35px;
-    opacity: 0;
-  }
-
-  .burgerMenu {
-    .burgerMenu__button {
-      width: 35px;
-      height: 35px;
-      background: transparent;
-      border: 0;
-      position: absolute;
-      left: 10px;
-      top: 20px;
+    .headerTitle {
+      font-size: 3rem;
+      display: flex;
+      justify-content: center;
+      letter-spacing: 8.5px;
+      text-transform: uppercase;
+      bottom: 20px;
+      left: 50px;
       z-index: 4;
-      pointer-events: none;
-
-      .burgerMenu__button--span {
-        display: block;
-        width: 20px;
-        height: 3px;
-        background-color: #FFF135;
-        border-radius: 6px;
-        margin-bottom: 4px;
-      }
-
+      margin: 0;
+      white-space: nowrap;
     }
 
-    .navPage {
-      position: fixed;
-      left: 0;
-      top: 0;
-      background-color: rgba(170, 8, 148, 1);
-      height: 100vh;
-      width: 100vw;
-      visibility: hidden;
+
+
+    .menuTrigger {
+      position: relative;
+      z-index: 5;
+      width: 70px;
+      height: 50px;
       opacity: 0;
-      transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
-      z-index: 1;
+    }
 
-      ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: space-evenly;
-        text-align: center;
+    .burgerMenu {
+      .burgerMenu__button {
+        width: 35px;
+        height: 35px;
+        background: transparent;
+        border: 0;
+        position: absolute;
+        left: 10px;
+        top: 15px;
+        z-index: 4;
+
+
+        .burgerMenu__button--span {
+          display: block;
+          width: 45px;
+          height: 7px;
+          background-color: #FFF135;
+          border-radius: 6px;
+          margin-bottom: 4px;
+        }
+
       }
 
+      .navPage {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba(170, 8, 148, 1);
+        height: 100vh;
+        width: 100vw;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
+        z-index: 1;
+
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-evenly;
+          text-align: center;
+          text-transform: uppercase;
+          a {
+            color: white;
+          }
+        }
+
+
+      }
+    }
+
+
+
+
+    input:checked+.burgerMenu button span {
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      z-index: 5;
+    }
+
+    input:checked+.burgerMenu button span:nth-child(2) {
+      opacity: 0;
+    }
+
+    input:checked+.burgerMenu button span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    input:checked+.burgerMenu button span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+
+    input:checked+.burgerMenu nav {
+      visibility: visible;
+      opacity: 1;
+      position: fixed;
 
     }
-  }
-
-  input:checked+.burgerMenu button span {
-    position: absolute;
-    transition: all 0.3s ease-in-out;
-  }
-
-  input:checked+.burgerMenu button span:nth-child(2) {
-    opacity: 0;
-  }
-
-  input:checked+.burgerMenu button span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  input:checked+.burgerMenu button span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-
-
-  input:checked+.burgerMenu nav {
-    visibility: visible;
-    opacity: 1;
-    position: fixed;
 
   }
-
-  .headerTitle {
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 22px;
-    left: 90px;
-    z-index: 4;
-    margin: 0;
-  }
-
 
   .page1 {
     grid-column: span 5;
     border-top: 16px solid #FFF135;
 
-    .top,
-    .bottom {
-      grid-column: span 5;
-    }
+    // .page1__top,
+    // .page1__bottom {
+    //   // grid-column: span 5;
+    // }
 
-    .top {
-      z-index: 3;
+    .page1__top {
+      // z-index: 3;
 
-      .pageTitle {
-        .Tahini {
+      .page1__title {
+        .title__tahini {
           position: relative;
           text-transform: uppercase;
           color: #00FF38;
           font-size: 9rem;
           z-index: 0;
-          padding: 0px 16px 0px 16px;
-          margin-bottom: 0px;
+          padding: 0px 16px;
+          // margin-bottom: 0px;
 
-          .drizzle {
+          .title__drizzle {
             position: absolute;
             font-size: 3.46rem;
             left: 192px;
@@ -139,7 +150,7 @@ main {
             color: #AB76FF;
           }
 
-          .chickpeas {
+          .title__chickpeas {
             position: absolute;
             color: #FFF135;
             font-size: 3.5rem;
@@ -153,26 +164,22 @@ main {
     }
 
     .pageText {
-      font-size: 2.5rem;
+      // font-size: 2.5rem;
       color: #00FF38;
       padding: 0 16px;
     }
 
-    .bottom {
-      display: inherit;
+    .page1__bottom {
+      // display: inherit;
 
-      .salladImg img {
+      .page1__bottom--salladImg {
         width: 100%;
         height: 100%;
       }
 
       .pageText {
-        // grid-column: span 5;
-        // font-size: 2.5rem;
         background-color: #fff;
         color: #AB76FF;
-        // margin: 16px 0 16px 0;
-        // padding: 0 16px 0 16px;
         border-top: 16px solid #FFF135;
         border-bottom: 16px solid #FFF135;
 
@@ -198,40 +205,30 @@ main {
       height: 50%;
     }
 
-    // .foodMenu_wrapper {
-    //   // padding: 16px;
-
-    //     .foodMenu_image img {
-    //       width: 100%;
-    //       height: 100%;
-    //     }
-    //   }
     .foodMenu_section {
       color: #000000;
       background-color: white;
       text-align: center;
       border-bottom: 1px solid black;
       border-top: 1px solid black;
+      position: relative;
 
       .foodMenu_section--item {
-        font-size: 4rem;
         text-transform: uppercase;
       }
 
       .foodMenu_section--itemDescription {
         font-family: $secondaryFont;
-        font-size: 2rem;
         margin: 15px;
       }
 
-      .foodMenu_section--itemPrice {
-        font-size: 3rem;
-        position: relative;
-      }
+      .foodMenu_section--itemPrice {}
 
       .itemLabel {
+        font-size: 1rem;
         position: absolute;
         right: 2rem;
+        top: 1.5rem;
         text-transform: uppercase;
         margin-block: 10px;
         display: inline-block;
@@ -275,49 +272,59 @@ main {
     border-top: 16px solid white;
     padding: 0 16px;
 
-    .booking { 
-      // form {
-      //   // display: flex;
-      //   // flex-direction: column;
-      // }
+    .page3__header {
+      text-align: center;
+      text-transform: uppercase;
+    }
 
-      label {
-        display: inline-block;
-        width: auto;
-        text-align: left;
-        padding: 8px 0;
-      }
+    .page3__booking {
+
+      // label {
+      //   display: inline-block;
+      //   // width: auto;
+      //   // padding: 8px 0;
+      // }
 
 
       input[type=text],
+      input[type=date],
       select {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        border: none;
+        border-radius: 25px;
         box-sizing: border-box;
       }
 
 
       input[type=submit],
       input[type=reset] {
-        width: 40%;
-        background-color: #04AA6D;
+        width: 80%;
+        padding: 0 16px;
         padding: 14px 20px;
-        margin: 8px 0;
+        margin: 8px 10px;
+        margin-left: 50px;
         border: none;
-        border-radius: 4px;
+        border-radius: 18px;
         cursor: pointer;
       }
+
+      input[type=submit] {
+        background-color: #FFF135;
+      }
+
+      input[type=reset] {
+        background-color: #AB76FF;
+      }
+
     }
 
-    .contactInfo {
+    .page3__contactInfo {
       position: relative;
 
       .contactInfo__bg {
-        // position: relative;
         filter: blur(3px);
         background-image: url(/assets/photos/wineTable-min.jpg);
         min-width: 30vw;
@@ -341,6 +348,7 @@ main {
             font-size: 1rem;
             margin: 0;
           }
+
           a {
             padding: 1rem;
             font-size: 1.5rem;
@@ -350,9 +358,9 @@ main {
         }
 
         .material-symbols-outlined {
-            font-size: 2.5rem;
-            color: #27BCEB;
-            text-shadow: -2px -2px #000;
+          font-size: 2.5rem;
+          color: #27BCEB;
+          text-shadow: -2px -2px #000;
         }
       }
     }
@@ -362,10 +370,27 @@ main {
     grid-column: span 5;
     background-color: #AB76FF;
     text-align: center;
+
     p {
-          font-family: $secondaryFont;
+      font-family: $secondaryFont;
     }
 
+    input {
+      width: 80%;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      // font-size: 1.8rem;
+    }
 
+    input[type=submit] {
+      background-color: #00FF38;
+    }
+
+    input[type=reset] {
+      background-color: #FFF135;
+    }
   }
 }
