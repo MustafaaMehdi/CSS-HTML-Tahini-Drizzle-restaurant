@@ -1,7 +1,11 @@
 @import "vendor/normalize";
 @import "fonts";
 // @import "mobile";
-@import "desktop"
+
+@media screen and (max-width: 899px) {
+    @import "mobile";
+  }
+// @import "desktop"
 
 // @import "tablet";
 
@@ -11,6 +15,6 @@
 //   @import "tablet";
 // }
 
-// @media screen and (min-width: 1280px) {
-//   @import "desktop";
-// }
+@media screen and (min-width: 900px) {
+  @import "desktop";
+}
