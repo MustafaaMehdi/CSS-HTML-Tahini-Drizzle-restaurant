@@ -8,8 +8,7 @@
 
 
   <!-- Lägg till rätt font + SEO metataggar -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto+Condensed&display=swap"
@@ -21,7 +20,7 @@
 <body>
   <main>
     <header>
-      <input type="checkbox" class="menuTrigger">
+      <input type="checkbox" class="menuTrigger" aria-label="menu button">
       <div class="burgerMenu">
         <button class="burgerMenu__button" aria-label="menu">
           <span class="burgerMenu__button--span"></span>
@@ -70,21 +69,21 @@
       </div>
 
       <div class="page2">
-        <section class="foodMenu_wrapper">
-          <div class="food_images">
-            <img class="foodMenu_image1" src="assets/photos/Veggiesallad-min.jpg" height="450px" width="360px"
-            alt="a bowl of sallad" loading="lazy">
-            <img class="foodMenu_image2" src="assets/photos/hummus-min.jpg" height="350px" width="390px"
-            alt="a bowl of hummus" loading="lazy">
-            <img class="foodMenu_image3" src="assets/photos/chiarlaban-min.jpg" height="450px" width="360px"
-            alt="3 separate bowls of chiar laban, mojaddara and hummus" loading="lazy">
-          </div>
+        <!-- <div class="food_images"> -->
+          <img class="foodMenu_image1" src="assets/photos/Veggiesallad-min.jpg" height="450px" width="360px"
+          alt="a bowl of sallad" loading="lazy">
+          <img class="foodMenu_image2" src="assets/photos/hummus-min.jpg" height="350px" width="390px"
+          alt="a bowl of hummus" loading="lazy">
+          <img class="foodMenu_image3" src="assets/photos/chiarlaban-min.jpg" height="450px" width="360px"
+          alt="3 separate bowls of chiar laban, mojaddara and hummus" loading="lazy">
+        <!-- </div> -->
+        <!-- <section class="foodMenu_wrapper"> -->
           <!-- <img class="foodMenu_image1" src="assets/photos/Veggiesallad-min.jpg" height="450px" width="360px"
             alt="a bowl of sallad" loading="lazy"> -->
             <ul class="foodMenu_bg1"></ul>
           <ul class="foodMenu_section">
             <li class="foodMenu_section--item">Halloumi moklieh</li>
-            <!-- <li class="itemLabel new"><span>New!</span></li> -->
+            <li class="itemLabel new"><span>New!</span></li>
             <li class="foodMenu_section--itemDescription">Deep-fried halloumi</li>
             <li class="foodMenu_section--itemPrice">195 kr</li>
           </ul>
@@ -112,7 +111,7 @@
           </ul>
           <ul class="foodMenu_section">
             <li class="foodMenu_section--item">Moutabbal batinzian</li>
-            <!-- <li class="itemLabel vegan"><span>Vegan</span></li> -->
+            <li class="itemLabel vegan"><span>Vegan</span></li>
             <li class="foodMenu_section--itemDescription">Smoked chopped aubergine, sesame paste, garlic and lemon</li>
             <li class="foodMenu_section--itemPrice">175 kr</li>
           </ul>
@@ -121,7 +120,7 @@
             <ul class="foodMenu_bg3"></ul>
           <ul class="foodMenu_section">
             <li class="foodMenu_section--item">Ardishoki</li>
-            <!-- <li class="itemLabel popular"><span>Popular</span></li> -->
+            <li class="itemLabel popular"><span>Popular</span></li>
             <li class="foodMenu_section--itemDescription">Artichoke with lemon and garlic marinade</li>
             <li class="foodMenu_section--itemPrice">99 kr</li>
           </ul>
@@ -131,7 +130,7 @@
               syrup</li>
             <li class="foodMenu_section--itemPrice">123 kr</li>
           </ul>
-        </section>
+        <!-- </section> -->
 
       </div>
 
