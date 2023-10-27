@@ -80,6 +80,7 @@ main {
           justify-content: space-evenly;
           text-align: center;
           text-transform: uppercase;
+
           a {
             color: white;
           }
@@ -120,252 +121,256 @@ main {
 
   }
 
-  .page1 {
+  .pageContent {
     grid-column: span 5;
-    border-top: 16px solid #FFF135;
+    .page1 {
+      grid-column: span 5;
+      border-top: 16px solid #FFF135;
 
-    // .page1__top,
-    // .page1__bottom {
-    //   // grid-column: span 5;
-    // }
+      // .page1__top,
+      // .page1__bottom {
+      //   // grid-column: span 5;
+      // }
 
-    .page1__top {
-      // z-index: 3;
+      .page1__top {
+        // z-index: 3;
 
-      .page1__title {
-        .title__tahini {
-          position: relative;
-          text-transform: uppercase;
-          color: #00FF38;
-          font-size: 9rem;
-          z-index: 0;
-          padding: 0px 16px;
-          // margin-bottom: 0px;
+        .page1__title {
+          .title__tahini {
+            position: relative;
+            text-transform: uppercase;
+            color: #00FF38;
+            font-size: 9rem;
+            z-index: 0;
+            padding: 0px 16px;
+            // margin-bottom: 0px;
 
-          .title__drizzle {
-            position: absolute;
-            font-size: 3.46rem;
-            left: 192px;
-            top: -25px;
-            color: #AB76FF;
+            .title__drizzle {
+              position: absolute;
+              font-size: 3.46rem;
+              left: 192px;
+              top: -25px;
+              color: #AB76FF;
+            }
+
+            .title__chickpeas {
+              position: absolute;
+              color: #FFF135;
+              font-size: 3.5rem;
+              left: 25px;
+              top: 110px;
+              z-index: -1;
+            }
           }
 
-          .title__chickpeas {
-            position: absolute;
-            color: #FFF135;
-            font-size: 3.5rem;
-            left: 25px;
-            top: 110px;
-            z-index: -1;
-          }
         }
-
-      }
-    }
-
-    .pageText {
-      // font-size: 2.5rem;
-      color: #00FF38;
-      padding: 0 16px;
-    }
-
-    .page1__bottom {
-      // display: inherit;
-
-      .page1__bottom--salladImg {
-        width: 100%;
-        height: 100%;
       }
 
       .pageText {
-        background-color: #fff;
-        color: #AB76FF;
-        border-top: 16px solid #FFF135;
-        border-bottom: 16px solid #FFF135;
+        // font-size: 2.5rem;
+        color: #00FF38;
+        padding: 0 16px;
+      }
 
-        .pageText__explore {
-          color: #000000;
-          margin: 0;
-          text-align: right;
+      .page1__bottom {
+        // display: inherit;
+
+        .page1__bottom--salladImg {
+          width: 100%;
+          height: 100%;
+        }
+
+        .pageText {
+          background-color: #fff;
+          color: #AB76FF;
+          border-top: 16px solid #FFF135;
+          border-bottom: 16px solid #FFF135;
+
+          .pageText__explore {
+            color: #000000;
+            margin: 0;
+            text-align: right;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+
+    }
+
+    .page2 {
+      grid-column: span 5;
+      background-color: #FFF135;
+      padding: 16px;
+
+      .foodMenu_image {
+        width: 100%;
+        height: 50%;
+      }
+
+      .foodMenu_section {
+        color: #000000;
+        background-color: white;
+        text-align: center;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        position: relative;
+
+        .foodMenu_section--item {
           text-transform: uppercase;
         }
-      }
-    }
 
-
-  }
-
-  .page2 {
-    grid-column: span 5;
-    background-color: #FFF135;
-    padding: 16px;
-
-    .foodMenu_image {
-      width: 100%;
-      height: 50%;
-    }
-
-    .foodMenu_section {
-      color: #000000;
-      background-color: white;
-      text-align: center;
-      border-bottom: 1px solid black;
-      border-top: 1px solid black;
-      position: relative;
-
-      .foodMenu_section--item {
-        text-transform: uppercase;
-      }
-
-      .foodMenu_section--itemDescription {
-        font-family: $secondaryFont;
-        margin: 15px;
-      }
-
-      .foodMenu_section--itemPrice {}
-
-      .itemLabel {
-        font-size: 1rem;
-        position: absolute;
-        right: 2rem;
-        top: 1.5rem;
-        text-transform: uppercase;
-        margin-block: 10px;
-        display: inline-block;
-        padding: 0 12px;
-
-      }
-
-      .new {
-        background-color: rgb(136, 30, 120);
-        transform: rotate(3deg);
-
-        span {
-          transform: rotate(-3deg);
+        .foodMenu_section--itemDescription {
+          font-family: $secondaryFont;
+          margin: 15px;
         }
-      }
 
-      .vegan {
-        background-color: rgb(20, 150, 9);
-        transform: rotate(-3deg);
+        .foodMenu_section--itemPrice {}
 
-        span {
+        .itemLabel {
+          font-size: 1rem;
+          position: absolute;
+          right: 2rem;
+          top: 1.5rem;
+          text-transform: uppercase;
+          margin-block: 10px;
+          display: inline-block;
+          padding: 0 12px;
+
+        }
+
+        .new {
+          background-color: rgb(136, 30, 120);
           transform: rotate(3deg);
+
+          span {
+            transform: rotate(-3deg);
+          }
+        }
+
+        .vegan {
+          background-color: rgb(20, 150, 9);
+          transform: rotate(-3deg);
+
+          span {
+            transform: rotate(3deg);
+          }
+        }
+
+        .popular {
+          background-color: rgb(235, 221, 34);
+          transform: rotate(-1deg);
+
+          span {
+            transform: rotate(1deg);
+          }
         }
       }
+    }
 
-      .popular {
-        background-color: rgb(235, 221, 34);
-        transform: rotate(-1deg);
+    .page3 {
+      grid-column: span 5;
+      background-color: #00FF38;
+      color: #000000;
+      border-top: 16px solid white;
+      padding: 0 16px;
 
-        span {
-          transform: rotate(1deg);
+      .page3__header {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .page3__booking {
+
+        // label {
+        //   display: inline-block;
+        //   // width: auto;
+        //   // padding: 8px 0;
+        // }
+
+
+        input[type=text],
+        input[type=date],
+        select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: none;
+          border-radius: 25px;
+          box-sizing: border-box;
         }
-      }
-    }
-  }
-
-  .page3 {
-    grid-column: span 5;
-    background-color: #00FF38;
-    color: #000000;
-    border-top: 16px solid white;
-    padding: 0 16px;
-
-    .page3__header {
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .page3__booking {
-
-      // label {
-      //   display: inline-block;
-      //   // width: auto;
-      //   // padding: 8px 0;
-      // }
 
 
-      input[type=text],
-      input[type=date],
-      select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: none;
-        border-radius: 25px;
-        box-sizing: border-box;
+        input[type=submit],
+        input[type=reset] {
+          width: 80%;
+          padding: 0 16px;
+          padding: 14px 20px;
+          margin: 8px 10px;
+          margin-left: 50px;
+          border: none;
+          border-radius: 18px;
+          cursor: pointer;
+        }
+
+        input[type=submit] {
+          background-color: #FFF135;
+        }
+
+        input[type=reset] {
+          background-color: #AB76FF;
+        }
+
       }
 
+      .page3__contactInfo {
+        position: relative;
 
-      input[type=submit],
-      input[type=reset] {
-        width: 80%;
-        padding: 0 16px;
-        padding: 14px 20px;
-        margin: 8px 10px;
-        margin-left: 50px;
-        border: none;
-        border-radius: 18px;
-        cursor: pointer;
-      }
+        .contactInfo__bg {
+          filter: blur(3px);
+          background-image: url("/assets/photos/wineTable-min.jpg");
+          min-width: 30vw;
+          min-height: 30vh;
+          background-size: cover;
+          background-position: center;
+          top: 0;
+          left: 0;
+        }
 
-      input[type=submit] {
-        background-color: #FFF135;
-      }
+        .contactInfo__bg--text {
+          position: absolute;
+          bottom: 15%;
+          left: 1%;
 
-      input[type=reset] {
-        background-color: #AB76FF;
-      }
+          li {
+            display: block;
+            margin-bottom: 15px;
 
-    }
+            p {
+              font-size: 1rem;
+              margin: 0;
+            }
 
-    .page3__contactInfo {
-      position: relative;
-
-      .contactInfo__bg {
-        filter: blur(3px);
-        background-image: url(/assets/photos/wineTable-min.jpg);
-        min-width: 30vw;
-        min-height: 30vh;
-        background-size: cover;
-        background-position: center;
-        top: 0;
-        left: 0;
-      }
-
-      .contactInfo__bg--text {
-        position: absolute;
-        bottom: 15%;
-        left: 1%;
-
-        li {
-          display: block;
-          margin-bottom: 15px;
-
-          p {
-            font-size: 1rem;
-            margin: 0;
+            a {
+              padding: 1rem;
+              font-size: 1.5rem;
+              color: #27BCEB;
+              text-shadow: -2px -2px #000;
+            }
           }
 
-          a {
-            padding: 1rem;
-            font-size: 1.5rem;
+          .material-symbols-outlined {
+            font-size: 2.5rem;
             color: #27BCEB;
             text-shadow: -2px -2px #000;
           }
         }
-
-        .material-symbols-outlined {
-          font-size: 2.5rem;
-          color: #27BCEB;
-          text-shadow: -2px -2px #000;
-        }
       }
     }
-  }
 
+
+  }
   .cookieBanner {
     grid-column: span 5;
     background-color: #AB76FF;

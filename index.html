@@ -9,8 +9,8 @@
 
   <!-- Lägg till rätt font + SEO metataggar -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto+Condensed&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -22,14 +22,14 @@
     <header>
       <input type="checkbox" class="menuTrigger">
       <div class="burgerMenu">
-        <button class="burgerMenu__button">
+        <button class="burgerMenu__button" aria-label="menu">
           <span class="burgerMenu__button--span"></span>
           <span class="burgerMenu__button--span"></span>
           <span class="burgerMenu__button--span"></span>
 
           <nav class="navPage">
             <ul>
-              <li><a href="#" target="_blank">hem</a></li>
+              <li><a href="#" target="_blank">Hem</a></li>
               <li><a href="#" target="_blank">Kontakt</a></li>
               <li><a href="#" target="_blank">Om oss</a></li>
             </ul>
@@ -38,7 +38,7 @@
       </div>
       <h1 class="headerTitle">Tough Cookie</h1>
     </header>
-
+    <div class="pageContent">
     <div class="page1">
       <section class="page1__top">
         <article class="page1__title">
@@ -147,7 +147,7 @@
 
       </section>
     </div>
-
+  </div>  
     <div class="cookieBanner">
       <p>You should accept cookies</p>
       <input type="submit" value="Accept">
