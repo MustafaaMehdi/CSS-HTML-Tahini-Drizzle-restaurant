@@ -137,16 +137,16 @@
 
       <div class="page3">
         <section class="page3__booking">
-          <h2 class="page3__header">Book your table</h2>
-          <form autocomplete="on">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" placeholder="John. Doe">
-            <label for="e-mail">E-mail:</label>
-            <input type="text" name="e-mail" id="e-mail" placeholder="example@mail.com">
-            <label for="phone-number">Phone number:</label>
-            <input type="text" name="phone-number" id="phone-number" placeholder="+46 701234567">
+          <p class="page3__header">Book your table</p>
+          <form class="booking__form" autocomplete="on">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="e-mail">Email</label>
+            <input type="text" name="e-mail" id="e-mail">
+            <label for="phone-number">Phone</label>
+            <input type="text" name="phone-number" id="phone-number">
             <label for="date">Date</label>
-            <input type="date" name="date" id="date" placeholder="Country">
+            <input type="bookingdate" name="date" id="date">
             <label for="partysize">Party size</label>
             <input type="text" name="partysize" id="partysize">
             <label for="allergies">Allergies</label>
@@ -176,13 +176,13 @@
 
         <!-- </section> -->
       </div>
-      <div class="cookieBanner">
-        <p>You should accept cookies</p>
-        <input type="submit" value="Accept">
-        <input type="reset" value="Decline">
-      </div>
-    </div>
 
+    </div>
+    <div class="cookieBanner">
+      <p>You should accept cookies.</p>
+      <input type="submit" value="Accept">
+      <input type="reset" value="Decline">
+    </div>
   </main>
 </body>
 
