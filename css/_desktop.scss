@@ -6,7 +6,8 @@ body {
 
 
 header {
-  // grid-column: span 1;
+  position: relative;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   background-color: #000000;
@@ -18,18 +19,22 @@ header {
     text-orientation: upright;
     text-transform: uppercase;
     font-size: 3rem;
-    margin-left: 20px;
+    margin-left: 13px;
   }
 
   .menuTrigger {
-    position: relative;
-    z-index: 5;
+    // position: relative;
+    z-index: 15;
     width: 70px;
     height: 50px;
     opacity: 0;
+    cursor: pointer;
+
   }
 
+
   .burgerMenu {
+
     .burgerMenu__button {
       width: 35px;
       height: 35px;
@@ -38,19 +43,21 @@ header {
       position: absolute;
       left: 10px;
       top: 15px;
-      z-index: 4;
+      z-index: 9;
 
 
       .burgerMenu__button--span {
         display: block;
-        width: 45px;
+        width: 50px;
         height: 7px;
         background-color: #FFF135;
         border-radius: 6px;
-        margin-bottom: 4px;
-      }
-
+        margin-bottom: 6px;
+        transition: all 0.3s ease-in;
     }
+    
+
+  }
 
     .navPage {
       position: fixed;
@@ -62,20 +69,26 @@ header {
       visibility: hidden;
       opacity: 0;
       transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
-      z-index: 1;
+      z-index: 9;
+
 
       ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
+        // margin-bottom: 3rem;
+        // display: flex;
+        // flex-direction: column;
+        position: absolute;
+        top: 20%;
+        left: 35%;
         height: 100%;
         justify-content: space-evenly;
         text-align: center;
         text-transform: uppercase;
-
-        a {
+        font-size: 4rem;
+        li {
+          padding-bottom: 5rem;
+          a {
           color: white;
+        }
         }
       }
 
@@ -83,13 +96,22 @@ header {
     }
   }
 
-
-
+  .menuTrigger:not(:checked):hover + .burgerMenu .burgerMenu__button--span:nth-child(1) {
+    margin-left: -10px;
+  }
+  
+  .menuTrigger:not(:checked):hover + .burgerMenu .burgerMenu__button--span:nth-child(2) {
+    margin-left: 5px;
+    transform: rotate(-3deg);
+  }
+  
+  .menuTrigger:not(:checked):hover + .burgerMenu .burgerMenu__button--span:nth-child(3) {
+    margin-left: -5px;
+  }
 
   input:checked+.burgerMenu button span {
     position: absolute;
     transition: all 0.3s ease-in-out;
-    z-index: 5;
   }
 
   input:checked+.burgerMenu button span:nth-child(2) {
@@ -98,10 +120,13 @@ header {
 
   input:checked+.burgerMenu button span:nth-child(1) {
     transform: rotate(45deg);
+    margin-left: 0;
   }
+
 
   input:checked+.burgerMenu button span:nth-child(3) {
     transform: rotate(-45deg);
+    margin-left: 0;
   }
 
 
@@ -109,7 +134,8 @@ header {
     visibility: visible;
     opacity: 1;
     position: fixed;
-
+    z-index: 89;
+    margin-left: 6.3vw;
   }
 }
 
@@ -117,6 +143,7 @@ header {
   margin-left: 6.3vw;
   // grid-column: span 12;
   position: relative;
+  // z-index: 1;
 
   // grid-template-rows: repeat(12, 1fr);
   .page1,
@@ -232,13 +259,13 @@ header {
       grid-column: 1 / span 3;
       width: 100%;
       object-fit: cover;
-      height: 450px;
+      height: 400px;
     }
 
     .foodMenu_image2 {
       grid-column: 4 / span 4;
       width: 100%;
-      height: 450px;
+      height: 400px;
       object-fit: cover;
 
 
@@ -246,9 +273,10 @@ header {
 
     .foodMenu_image3 {
       grid-column: 8 / span 4;
+      // min-width: 500px;
       width: 100%;
       object-fit: cover;
-      height: 450px;
+      height: 400px;
     }
 
     }
@@ -510,6 +538,7 @@ header {
   left: 0;
   right: 0;
   height: 11vh;
+  z-index: 19;
   p {
     position: absolute;
     font-family: $secondaryFont;
