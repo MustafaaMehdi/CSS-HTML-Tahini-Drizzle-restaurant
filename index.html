@@ -22,7 +22,7 @@
     <header>
       <input type="checkbox" class="menuTrigger" aria-label="menu button">
       <div class="burgerMenu">
-        <button class="burgerMenu__button" aria-label="menu">
+        <button class="burgerMenu__button" aria-label="open menu">
           <span class="burgerMenu__button--span"></span>
           <span class="burgerMenu__button--span"></span>
           <span class="burgerMenu__button--span"></span>
@@ -69,14 +69,20 @@
       </div>
 
       <div class="page2">
-        <!-- <div class="food_images"> -->
+        <section class="food_images">
+          <!-- <figure> -->
           <img class="foodMenu_image1" src="assets/photos/Veggiesallad-min.jpg" height="450px" width="360px"
           alt="a bowl of sallad" loading="lazy">
+        <!-- </figure>
+        <figure> -->
           <img class="foodMenu_image2" src="assets/photos/hummus-min.jpg" height="350px" width="390px"
           alt="a bowl of hummus" loading="lazy">
+        <!-- </figure>
+        <figure> -->
           <img class="foodMenu_image3" src="assets/photos/chiarlaban-min.jpg" height="450px" width="360px"
           alt="3 separate bowls of chiar laban, mojaddara and hummus" loading="lazy">
-        <!-- </div> -->
+        <!-- </figure> -->
+        </section>
         <section class="foodMenu_wrapper">
 
           <!-- <img class="foodMenu_image1" src="assets/photos/Veggiesallad-min.jpg" height="450px" width="360px"
@@ -96,7 +102,7 @@
           <!-- <img class="foodMenu_image2" src="assets/photos/hummus-min.jpg" height="350px" width="390px"
             alt="a bowl of hummus" loading="lazy"> -->
           <ul class="foodMenu_section">
-            <li class="foodMenu_section--item">Chiar & laban</dt>
+            <li class="foodMenu_section--item">Chiar & laban</li>
             <li class="foodMenu_section--itemDescription">Lebanese spicy yoghurt with chopped cucumber</li>
             <li class="foodMenu_section--itemPrice">95 kr</li>
           </ul>
@@ -146,7 +152,7 @@
             <label for="phone-number">Phone</label>
             <input type="text" name="phone-number" id="phone-number">
             <label for="date">Date</label>
-            <input type="bookingdate" name="date" id="date">
+            <input type="date" name="date" id="date">
             <label for="partysize">Party size</label>
             <input type="text" name="partysize" id="partysize">
             <label for="allergies">Allergies</label>
@@ -168,8 +174,9 @@
                 </li>
                 <li>
                   <p><span class="material-symbols-outlined">location_on</span><a href="https://maps.google.com/maps?q="
-                      target="_blank">Brända Tomten 111 31 Stockholm</a></p>
+                      target="_blank">Brända Tomten <span>111 31 Stockholm</a></p>
                 </li>
+                
               </ul>
             </div>
           </section>

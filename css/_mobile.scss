@@ -217,13 +217,13 @@ main {
         background-position: center;
       }
       .foodMenu_bg1 {
-        background-image: url("/assets/photos/Veggiesallad-min.jpg");
+        background-image: url("../assets/photos/Veggiesallad-min.jpg");
       }
       .foodMenu_bg2 {
-        background-image: url("/assets/photos/hummus-min.jpg");
+        background-image: url("../assets/photos/hummus-min.jpg");
       }
       .foodMenu_bg3 {
-        background-image: url("/assets/photos/chiarlaban.jpg");
+        background-image: url("../assets/photos/chiarlaban.jpg");
       }
       .foodMenu_section {
         color: #000000;
@@ -242,7 +242,7 @@ main {
           margin: 15px;
         }
 
-        .foodMenu_section--itemPrice {}
+        // .foodMenu_section--itemPrice {}
 
         .itemLabel {
           font-size: 1rem;
@@ -253,7 +253,8 @@ main {
           margin-block: 10px;
           display: inline-block;
           padding: 0 12px;
-
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: 600;
         }
 
         .new {
@@ -261,6 +262,7 @@ main {
           transform: rotate(3deg);
 
           span {
+            display: inline-block;
             transform: rotate(-3deg);
           }
         }

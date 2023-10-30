@@ -18,7 +18,7 @@ header {
     text-orientation: upright;
     text-transform: uppercase;
     font-size: 3rem;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 
   .menuTrigger {
@@ -223,23 +223,24 @@ header {
     background-color: #FFF135;
     padding-bottom: 32px;
     padding-top: 16px;
-    // .food_images {
-    // display: grid;
-    // grid-template-columns: repeat(11, 1fr);
-    // gap: 16px;
-
-    // min-width: 100%;
+    .food_images {
+      display: grid;
+      grid-column: 1 / span 11;
+      gap: 16px;
+      
     .foodMenu_image1 {
       grid-column: 1 / span 3;
       width: 100%;
       object-fit: cover;
+      height: 450px;
     }
 
     .foodMenu_image2 {
       grid-column: 4 / span 4;
       width: 100%;
-      height: 100%;
+      height: 450px;
       object-fit: cover;
+
 
     }
 
@@ -247,9 +248,10 @@ header {
       grid-column: 8 / span 4;
       width: 100%;
       object-fit: cover;
+      height: 450px;
     }
 
-    // }
+    }
 
     .foodMenu_bg1,
     .foodMenu_bg2,
@@ -278,6 +280,7 @@ header {
 
         li {
           margin: 16px 0;
+          padding-left: 16px;
         }
 
         .foodMenu_section--item {
@@ -295,6 +298,7 @@ header {
         .foodMenu_section--itemPrice {
           grid-column: 11 / span 1;
           text-align: right;
+          padding-right: 16px;
         }
 
         .itemLabel {
@@ -303,40 +307,45 @@ header {
           margin-block: 10px;
           display: inline-block;
           padding: 0 12px;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight:600;
         }
 
         .new {
-          left: 17rem;
+          left: 20rem;
           top: 1.3rem;
           position: absolute;
-          background-color: rgb(136, 30, 120);
+          background-color: #AC76FF;
           transform: rotate(3deg);
 
           span {
+            display: block;
             transform: rotate(-3deg);
           }
         }
 
         .vegan {
-          left: 20rem;
+          left: 23rem;
           top: 1.3rem;
           position: absolute;
-          background-color: rgb(20, 150, 9);
+          background-color: #00FF39;
           transform: rotate(-3deg);
 
           span {
+            display: block;
             transform: rotate(3deg);
           }
         }
 
         .popular {
-          left: 10rem;
+          left: 12rem;
           top: 1.3rem;
           position: absolute;
-          background-color: rgb(235, 221, 34);
+          background-color: #FEF035;
           transform: rotate(-1deg);
 
           span {
+            display: block;
             transform: rotate(1deg);
           }
 
@@ -372,11 +381,9 @@ header {
       // align-items: center;
       padding-left: 16px;
       .page3__header {
-        font-size: 4rem;
+        font-size: 5rem;
         text-align: left;
         text-transform: uppercase;
-        // width: 40vw;
-        margin: 0;
       }
       .booking__form {
         display: grid;
@@ -394,7 +401,7 @@ header {
       grid-column: 1 / span 3;
     }
       input[type=text],
-      input[type=bookingdate],
+      input[type=date],
       select {
         // font-size: 1rem;
         grid-column: 4 / span 6;
@@ -407,13 +414,14 @@ header {
         border-radius: 15px;
         // box-sizing:border-box;
         // float: center;
+        font-family: $secondaryFont;
       }
 
 
       input[type=submit],
       input[type=reset] {
         // font-size: 1.5rem;
-        width: 100%;
+        width: 95%;
         // padding: 0 16px;
         // padding: 3px 0;
         margin: 8px 1px;
@@ -449,10 +457,10 @@ header {
       grid-column: 6 / span 6;
       .contactInfo__bg {
         filter: blur(3px);
-        background-image: url("/assets/photos/wineTable-min.jpg");
+        background-image: url("../assets/photos/wineTable-min.jpg");
         // max-width: 40vw;
         min-height: 70vh;
-        width: 43vw;
+        width: 40vw;
         background-size: cover;
         background-position: center;
         margin-left: 50px;
@@ -469,13 +477,14 @@ header {
           margin-bottom: 15px;
 
           p {
-            font-size: 2rem;
-            margin: 0;
+            font-size: 3rem;
+            // margin: 0;
           }
 
           a {
             padding: 1rem;
-            // font-size: 4rem;
+            margin-right: 4rem;
+            font-size: 2rem;
             color: #27BCEB;
             text-shadow: -2px -2px #000;
             // width: 1vw;
@@ -483,7 +492,7 @@ header {
         }
 
         .material-symbols-outlined {
-          font-size: 4rem;
+          font-size: 5rem;
           color: #27BCEB;
           text-shadow: -2px -2px #000;
         }
@@ -496,8 +505,10 @@ header {
 
 .cookieBanner {
   background-color: #AB76FF;
-  position: relative;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   height: 11vh;
   p {
     position: absolute;
@@ -510,7 +521,7 @@ header {
 
   input {
     position: absolute;
-    width: 20%;
+    width: 18%;
     padding: 4px 15px;
     margin: 8px 0;
     border: none;
