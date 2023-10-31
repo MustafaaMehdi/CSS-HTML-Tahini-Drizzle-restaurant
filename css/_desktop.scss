@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -13,6 +16,7 @@ header {
   background-color: #000000;
   position: fixed;
   height: 100vh;
+  // align-items: center;
 
   .headerTitle {
     writing-mode: vertical-lr;
@@ -22,6 +26,7 @@ header {
     margin-left: 13px;
   }
 
+
   .menuTrigger {
     // position: relative;
     z-index: 15;
@@ -29,7 +34,6 @@ header {
     height: 50px;
     opacity: 0;
     cursor: pointer;
-
   }
 
 
@@ -53,7 +57,7 @@ header {
         background-color: #FFF135;
         border-radius: 6px;
         margin-bottom: 6px;
-        transition: all 0.3s ease-in;
+        transition: all 0.5s cubic-bezier(0.5, 0.82, 0.165, 1);
     }
     
 
@@ -111,7 +115,7 @@ header {
 
   input:checked+.burgerMenu button span {
     position: absolute;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s cubic-bezier(1, 0.82, 0.165, 1);
   }
 
   input:checked+.burgerMenu button span:nth-child(2) {
@@ -181,30 +185,37 @@ header {
     .page1__title {
       // display: inherit;
       grid-column: 1 / span 4;
+      position: relative;
 
       .title__tahini {
-        position: relative;
+        position: absolute;
         text-transform: uppercase;
         color: #00FF38;
         font-size: 9rem;
-        z-index: 0;
-        padding: 0px 16px;
-        // margin-bottom: 0px;
+        top: 7rem;
+        left: 8.5rem;
+        // z-index: 0;
+        // padding: 0px 16px;
+        border: 16px;
 
         .title__drizzle {
           position: absolute;
           font-size: 3.46rem;
-          left: 192px;
-          top: -25px;
+          // left: 192px;
+          // top: -25px;
+          top: -1.3rem;
+          right: 0.3rem;
           color: #AB76FF;
         }
 
         .title__chickpeas {
           position: absolute;
           color: #FFF135;
-          font-size: 3.5rem;
-          left: 25px;
-          top: 110px;
+          font-size: 3.4rem;
+          // left: 25px;
+          left: 1.35rem;
+          // top: 110px;
+          top: 7rem;
           z-index: -1;
         }
       }
@@ -214,19 +225,32 @@ header {
 
     .page1__text1 {
       grid-column: 5 / span 7;
-      // font-size: 3rem;
+      font-size: 3rem;
       color: #00FF38;
       background-color: #000000;
       padding: 16px;
+      margin: 16px;
     }
 
     .page1__bottom--salladImg {
       grid-column: 1 / span 5;
-
+      position: relative;
+      &:hover {
+        .page1__arrow {
+          bottom: 10px;
+        }
+      }
       .page1__salladImg {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+      .page1__arrow {
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        transform: rotate(90deg);
+        transition: bottom 0.3s ease-in-out;
       }
     }
 
@@ -235,17 +259,52 @@ header {
       color: #AB76FF;
       border-left: 16px solid #FFF135;
       grid-column: 6 / span 6;
-      padding: 16px;
+      margin: 0;
 
       .pageText__explore {
-        color: #000000;
-        margin: 0;
+
         text-align: left;
         text-transform: uppercase;
+        a {
+          color: #000000;
+        }
+        .explore__arrow {
+          padding-left: 10px;
+        }
       }
     }
   }
+  // .title__tahini {
+  //   position: absolute;
+  //   text-transform: uppercase;
+  //   color: #00FF38;
+  //   font-size: 7rem;
+  //   top: 7rem;
+  //   left: 5.5rem;
+  //   // z-index: 0;
+  //   // padding: 0px 16px;
+  //   border: 16px;
 
+  //   .title__drizzle {
+  //     position: absolute;
+  //     font-size: 2.67rem;
+  //     // left: 192px;
+  //     // top: -25px;
+  //     top: -1.2rem;
+  //     right: 0.3rem;
+  //     color: #AB76FF;
+  //   }
+
+  //   .title__chickpeas {
+  //     position: absolute;
+  //     color: #FFF135;
+  //     font-size: 2.7rem;
+  //     // left: 25px;
+  //     left: 1rem;
+  //     // top: 110px;
+  //     top: 5.2rem;
+  //     z-index: -1;
+  //   }
   .page2 {
     background-color: #FFF135;
     padding-bottom: 32px;
@@ -431,17 +490,13 @@ header {
       input[type=text],
       input[type=date],
       select {
-        // font-size: 1rem;
+        font-size: 1.5rem;
         grid-column: 4 / span 6;
-        width: 80%;
-        height: 70%;
-        // padding: 0px 10px;
-        // margin: 15px 0;
+        width: 83%;
+        height: 80%;
         display: inline-block;
         border: none;
         border-radius: 15px;
-        // box-sizing:border-box;
-        // float: center;
         font-family: $secondaryFont;
       }
 
@@ -449,7 +504,7 @@ header {
       input[type=submit],
       input[type=reset] {
         // font-size: 1.5rem;
-        width: 95%;
+        width: 100%;
         // padding: 0 16px;
         // padding: 3px 0;
         margin: 8px 1px;
@@ -487,7 +542,7 @@ header {
         filter: blur(3px);
         background-image: url("../assets/photos/wineTable-min.jpg");
         // max-width: 40vw;
-        min-height: 70vh;
+        min-height: 60vh;
         width: 40vw;
         background-size: cover;
         background-position: center;
@@ -532,6 +587,7 @@ header {
 }
 
 .cookieBanner {
+  display: flex;
   background-color: #AB76FF;
   position: fixed;
   bottom: 0;
@@ -550,7 +606,7 @@ header {
 
   input {
     position: absolute;
-    width: 18%;
+    width: 17%;
     padding: 4px 15px;
     margin: 8px 0;
     border: none;

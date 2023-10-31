@@ -43,8 +43,8 @@ main {
         background: transparent;
         border: 0;
         position: absolute;
-        left: 10px;
-        top: 15px;
+        // left: 10px;
+        top: 10px;
         z-index: 4;
 
 
@@ -270,7 +270,7 @@ main {
 
           span {
             display: block;
-            transform: rotate(-3);
+            transform: rotate(-3deg);
           }
         }
 
@@ -279,6 +279,7 @@ main {
           transform: rotate(-3deg);
 
           span {
+            display: block;
             transform: rotate(3deg);
           }
         }
@@ -288,6 +289,7 @@ main {
           transform: rotate(-1deg);
 
           span {
+            display: block;
             transform: rotate(1deg);
           }
         }
@@ -352,7 +354,7 @@ main {
 
         .contactInfo__bg {
           filter: blur(3px);
-          background-image: url("/assets/photos/wineTable-min.jpg");
+          background-image: url("../assets/photos/wineTable-min.jpg");
           min-width: 30vw;
           min-height: 50vh;
           background-size: cover;
