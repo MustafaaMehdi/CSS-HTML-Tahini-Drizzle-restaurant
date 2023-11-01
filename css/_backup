@@ -15,7 +15,7 @@ header {
 
 
   .headerTitle {
-    // writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
     text-orientation: upright;
     text-transform: uppercase;
     font-size: 3rem;
