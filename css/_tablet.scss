@@ -130,8 +130,8 @@ header {
     // border-right: 16px solid #FFF135;
     // border-left: 16px solid #FFF135;
     display: grid;
-    grid-template-areas: repeat(5, 1fr);
-    // gap: 16px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
   }
 
   .page1 {
@@ -147,7 +147,7 @@ header {
         font-size: 8rem;
         z-index: 0;
         top: 3rem;
-        left: 3rem;
+        left: 1rem;
         margin: 0;
 
         .title__drizzle {
@@ -238,28 +238,10 @@ header {
     .food_images {
       grid-column: 1 / span 2;
       grid-row: 1 / span 5;
-      // min-height: 100%;
-      // grid-row: 1 / span 2;
-    .foodMenu_image1 {
-      // grid-column: 1 / span 3;
-      // grid-row: 1 / span 2;
-      width: 100%;
-      // height: fit-content;
-      object-fit: cover;
-    }
 
-    .foodMenu_image2 {
-      // grid-column: 1 / span 3;
-      // grid-row: 3 / span 2;
-      width: 100%;
-      // height: fit-content;
-      object-fit: cover;
-
-    }
-
+    .foodMenu_image1,
+    .foodMenu_image2,
     .foodMenu_image3 {
-      // grid-column: 1 / span 3;
-      // grid-row: 5 / span 1;
       width: 100%;
       object-fit:cover;
     }
@@ -374,7 +356,7 @@ header {
     background-color: #00FF38;
     color: #000000;
     border-left: 16px solid white;
-    gap: 16px;
+    // gap: 16px;
     align-items: center;
     // border-top: 16px solid white;
     // padding: 0 16px;
@@ -394,22 +376,17 @@ header {
       padding-left: 16px;
       .page3__header {
         font-size: 4rem;
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
         // width: 40vw;
-        margin: 0;
+        margin: 2rem;
       }
       .booking__form {
         display: flex;
         flex-wrap: wrap;
-        // flex-direction: column;
-        // grid-template-columns: repeat(9, 1fr);
+        justify-content: space-evenly;
         gap:16px;
-        grid-column: 1 / span 5;
     label {
-      // justify-content: flex-start;
-      // font-size: 2rem;
-      // float: left;
       width: 20%;
       // margin: 10px 10px;
       text-transform: uppercase;
@@ -444,7 +421,7 @@ header {
         margin: 8px 1px;
         // margin-left: 50px;
         border: none;
-        border-radius: 18px;
+        border-radius: 15px;
         cursor: pointer;
         text-transform: uppercase;
         // float: right;
@@ -453,18 +430,13 @@ header {
       }
 
       input[type=submit] {
-        // grid-column: 5 / span 4;
         order: 2;
         background-color: #FFF135;
-        // justify-content: flex-end;
       }
 
       input[type=reset] {
-        // grid-column: 1 / span 4;
-        // grid-row: 7 / span 1;¨
         order: 1;
         background-color: #AB76FF;
-        // justify-content: flex-start;
       }
     }
   }
@@ -478,25 +450,26 @@ header {
         filter: blur(3px);
         background-image: url("/assets/photos/wineTable-min.jpg");
         // max-width: 40vw;
-        min-height: 70vh;
-        width: 43vw;
+        min-height: 50vh;
+        width: 80vw;
         background-size: cover;
         background-position: center;
-        margin-left: 50px;
+        margin-left:5rem;
         top: 50%;
         // left: 50%;
       }
 
       .contactInfo__bg--text {
         position: absolute;
-        top: 25%;
-        left: 5%;
+        top: 15%;
+        left: 10%;
+
         li {
           // display: inline-block;
           margin-bottom: 15px;
 
           p {
-            font-size: 2rem;
+            font-size: 3rem;
             
           }
 
@@ -523,40 +496,46 @@ header {
 }
 
 .cookieBanner {
+  // display: flex;
+  // justify-content: flex-start;
   background-color: #AB76FF;
   position: relative;
   bottom: 0;
+  right: 0;
+  left: 0;
   height: 11vh;
   p {
-    position: absolute;
+    // position: absolute;
     font-family: $secondaryFont;
     font-size: 1.5rem;
     top: 1rem;
-    left: 10rem;
+    left: 10rem;  
+    text-align: center;
+    margin: 0;
 
   }
 
   input {
     position: absolute;
-    width: 20%;
-    padding: 4px 15px;
-    margin: 8px 0;
+    width: 40%;
+    // padding: 4px 10px;
+    // margin: 10px 0;
     border: none;
     border-radius: 18px;
     cursor: pointer;
-    // font-size: 1.8rem;
+    // font-size: 1rem;
     text-transform: uppercase;
   }
 
   input[type=submit] {
     background-color: #00FF38;
     bottom: 1rem;
-    right: 1rem;
+    right: 5rem;
   }
 
   input[type=reset] {
     bottom: 1rem;
-    right: 22rem;
+    left: 5rem;
     background-color: #FFF135;
   }
 }

@@ -611,12 +611,12 @@ header {
   height: 11vh;
   z-index: 19;
   p {
-    position: absolute;
+    // position: absolute;
     font-family: $secondaryFont;
     font-size: 1.5rem;
     top: 1rem;
     left: 10rem;
-
+    text-align: center;
   }
 
   input {
