@@ -7,7 +7,11 @@ body {
   font-size: 2.5rem;
 }
 
-
+// img{
+//   width: 100%;
+//   height: auto;
+//   display: block;
+// }
 header {
   position: relative;
   z-index: 9;
@@ -16,14 +20,15 @@ header {
   background-color: #000000;
   position: fixed;
   height: 100vh;
-  // align-items: center;
+  align-items: center;
 
   .headerTitle {
     writing-mode: vertical-lr;
     text-orientation: upright;
     text-transform: uppercase;
-    font-size: 3rem;
-    margin-left: 13px;
+    // font-size: 3rem;
+    font-size: clamp(2rem, 5vh, 3rem);
+    // margin-left: 10px;
   }
 
 
@@ -144,7 +149,7 @@ header {
 }
 
 .pageContent {
-  margin-left: 6.3vw;
+  margin-left: 5vw;
   // grid-column: span 12;
   position: relative;
   // z-index: 1;
@@ -169,7 +174,7 @@ header {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     gap: 16px;
-
+    position: relative;
     // .page1__top,
     // .page1__bottom {
     //   // display: grid;
@@ -185,8 +190,7 @@ header {
     .page1__title {
       // display: inherit;
       grid-column: 1 / span 4;
-      position: relative;
-
+      // max-width: 10%;
       .title__tahini {
         position: absolute;
         text-transform: uppercase;
@@ -228,8 +232,13 @@ header {
       font-size: 3rem;
       color: #00FF38;
       background-color: #000000;
-      padding: 16px;
-      margin: 16px;
+      // padding: 0 32px;
+      // margin-top: 16px;
+      // position: relative;
+      p {
+        padding: 0 64px;
+        margin-left: 16px;
+      }
     }
 
     .page1__bottom--salladImg {
@@ -258,13 +267,15 @@ header {
       background-color: #fff;
       color: #AB76FF;
       border-left: 16px solid #FFF135;
+      padding: 0 16px;
       grid-column: 6 / span 6;
-      margin: 0;
+      font-size: 3rem;
 
       .pageText__explore {
 
         text-align: left;
         text-transform: uppercase;
+        margin: 0;
         a {
           color: #000000;
         }
@@ -547,13 +558,13 @@ header {
         background-size: cover;
         background-position: center;
         margin-left: 50px;
-        top: 50%;
+        // top: 50%;
         // left: 50%;
       }
 
       .contactInfo__bg--text {
         position: absolute;
-        top: 25%;
+        top: 8%;
         left: 10%;
         li {
           // display: inline-block;
