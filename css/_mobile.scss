@@ -5,24 +5,28 @@ body {
 }
 
 
-main {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+// main {
+//   display: grid;
+  
 
 
   header {
-    grid-column: span 5;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
     .headerTitle {
-      font-size: 3rem;
-      display: flex;
-      justify-content: center;
-      letter-spacing: 8.5px;
+      grid-column: 2 / span 3;
+      grid-row: 1 / span 1;
+      font-size: 2rem;
+      // display: flex;
+      // justify-content: center;
+      letter-spacing: 0.5rem;
       text-transform: uppercase;
-      bottom: 20px;
-      left: 50px;
-      z-index: 4;
-      margin: 0;
+      // bottom: 20px;
+      // left: 50px;
+      // z-index: 4;
+      margin: 8px 0;
       white-space: nowrap;
     }
 
@@ -37,6 +41,7 @@ main {
     }
 
     .burgerMenu {
+      grid-column: 1 / span 1;
       .burgerMenu__button {
         width: 35px;
         height: 35px;
@@ -432,4 +437,4 @@ main {
     }
   }
 
-}
+// }
