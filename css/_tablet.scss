@@ -6,25 +6,28 @@ body {
 
 header {
   background-color: #000000;
-  display: grid;
-  grid-template-columns: 10% 45% 45%;
+  // display: grid;
+  // grid-template-columns: 10% 45% 45%;
+  display: flex;
 
   .headerTitle {
-    grid-column: 2 / span 2;
-    grid-row: 1;
+    // grid-column: 2 / span 2;
+    // grid-row: 1;
     text-transform: uppercase;
     font-size: 5rem;
     margin: 0;
     letter-spacing: 1.3rem;
+    // flex-grow: 1;
   }
 
   .menuTrigger {
     grid-column: 1 / span 1;
     position: relative;
     z-index: 5;
-    width: 70px;
-    height: 50px;
+    width: 80px;
+    height: 100px;
     opacity: 0;
+    margin-right: 1rem;
   }
 
   .burgerMenu {
@@ -102,7 +105,11 @@ header {
   input:checked+.burgerMenu button span:nth-child(3) {
     transform: rotate(-45deg);
   }
-
+  .menuTrigger:checked {
+    position: fixed;
+    top: 10px; 
+    left: 10px; 
+  }
 
   input:checked+.burgerMenu nav {
     visibility: visible;
@@ -322,7 +329,7 @@ header {
         }
 
         .vegan {
-          right: 2rem;
+          left: 1rem;
           bottom: 1rem;
           // top: 1.3rem;
           position: absolute;
@@ -398,7 +405,7 @@ header {
       input[type=text],
       input[type=date],
       select {
-        // font-size: 1rem;
+        font-size: 2rem;
         // grid-column: 4 / span 6;
         width: 25%;
         // height: 70%;
@@ -461,7 +468,7 @@ header {
 
       .contactInfo__bg--text {
         position: absolute;
-        top: 15%;
+        top: 0;
         left: 10%;
 
         li {
