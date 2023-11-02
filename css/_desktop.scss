@@ -26,9 +26,7 @@ header {
     writing-mode: vertical-lr;
     text-orientation: upright;
     text-transform: uppercase;
-    // font-size: 3rem;
-    font-size: clamp(2rem, 5vh, 3rem);
-    // margin-left: 10px;
+    font-size: clamp(1rem, 5vh, 5rem);
   }
 
 
@@ -144,7 +142,7 @@ header {
     opacity: 1;
     position: fixed;
     z-index: 89;
-    margin-left: 6vw;
+    margin-left: 5vw;
   }
 }
 
@@ -191,11 +189,12 @@ header {
       // display: inherit;
       grid-column: 1 / span 4;
       // max-width: 10%;
+      
       .title__tahini {
         position: absolute;
         text-transform: uppercase;
         color: #00FF38;
-        font-size: 9rem;
+        font-size: clamp(1rem, 10vw, 9rem);
         top: 7rem;
         left: 8.5rem;
         // z-index: 0;
@@ -217,9 +216,9 @@ header {
           color: #FFF135;
           font-size: 3.4rem;
           // left: 25px;
-          left: 1.35rem;
+          right: 6.7rem;
           // top: 110px;
-          top: 7rem;
+          top: 6.7rem;
           z-index: -1;
         }
       }
@@ -575,7 +574,7 @@ header {
           margin-bottom: 15px;
 
           p {
-            font-size: 3rem;
+            font-size: clamp(0.5rem, 5vh, 3rem);;
             // margin: 0;
           }
 
@@ -616,7 +615,7 @@ header {
     font-size: 1.5rem;
     top: 1rem;
     left: 10rem;
-    text-align: center;
+
   }
 
   input {
