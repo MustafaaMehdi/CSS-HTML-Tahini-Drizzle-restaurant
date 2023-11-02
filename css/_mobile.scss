@@ -5,21 +5,12 @@ body {
 }
 
 
-// main {
-//   display: grid;
-  
-
-
   header {
   background-color: #000000;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
+  display: flex;
     .headerTitle {
-      grid-column: 2 / span 3;
-      grid-row: 1 / span 1;
       font-size: 2rem;
-      // display: flex;
+
       // justify-content: center;
       letter-spacing: 0.5rem;
       text-transform: uppercase;
@@ -27,7 +18,7 @@ body {
       // left: 50px;
       // z-index: 4;
       margin: 8px 0;
-      white-space: nowrap;
+      // white-space: nowrap;
     }
 
 
@@ -41,14 +32,14 @@ body {
     }
 
     .burgerMenu {
-      grid-column: 1 / span 1;
+      // grid-column: 1 / span 1;
       .burgerMenu__button {
         width: 35px;
         height: 35px;
         background: transparent;
         border: 0;
         position: absolute;
-        // left: 10px;
+        left: 5px;
         top: 10px;
         z-index: 4;
 
@@ -68,7 +59,7 @@ body {
         position: fixed;
         left: 0;
         top: 0;
-        background-color: rgba(170, 8, 148, 1);
+        background-color: #AB76FF;
         height: 100vh;
         width: 100vw;
         visibility: hidden;
@@ -156,14 +147,14 @@ body {
           color: #00FF38;
           font-size: 9rem;
           z-index: 0;
-          padding: 0px 16px;
-          // margin-bottom: 0px;
+          padding: 1rem;
+          margin: 0;
 
           .title__drizzle {
             position: absolute;
             font-size: 3.46rem;
-            left: 192px;
-            top: -25px;
+            left: 11.9rem;
+            top: -0.5rem;
             color: #AB76FF;
           }
 
@@ -171,8 +162,8 @@ body {
             position: absolute;
             color: #FFF135;
             font-size: 3.5rem;
-            left: 25px;
-            top: 110px;
+            left: 2.3rem;
+            bottom: 0.5rem;
             z-index: -1;
           }
         }
@@ -182,13 +173,9 @@ body {
       // }
 
       .page1__text1 {
-        // font-size: 2.5rem;
         color: #00FF38;
         padding: 0 16px;
       }
-
-      // .page1__bottom {
-      // display: inherit;
 
       .page1__salladImg {
         width: 100%;
@@ -199,7 +186,7 @@ body {
         background-color: #fff;
         color: #AB76FF;
         border-top: 16px solid #FFF135;
-        border-bottom: 16px solid #FFF135;
+
 
         .pageText__explore {
           color: #000000;
@@ -270,7 +257,7 @@ body {
         }
 
         .new {
-          background-color: rgb(136, 30, 120);
+          background-color: #AB76FF;
           transform: rotate(3deg);
 
           span {
@@ -280,7 +267,7 @@ body {
         }
 
         .vegan {
-          background-color: rgb(20, 150, 9);
+          background-color: #00FF39;
           transform: rotate(-3deg);
 
           span {
@@ -290,7 +277,7 @@ body {
         }
 
         .popular {
-          background-color: rgb(235, 221, 34);
+          background-color: #FFF135;
           transform: rotate(-1deg);
 
           span {
