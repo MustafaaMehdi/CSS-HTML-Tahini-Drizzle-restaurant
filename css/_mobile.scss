@@ -175,12 +175,24 @@ body {
       .page1__text1 {
         color: #00FF38;
         padding: 0 16px;
+        p {
+          margin: 0;
+        }
       }
-
+      .page1__bottom--salladImg {
+        position: relative;
       .page1__salladImg {
         width: 100%;
         height: 100%;
+
       }
+      .page1__arrow {
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        transform: rotate(90deg);
+      }
+    }
 
       .page1__text2 {
         background-color: #fff;
@@ -191,8 +203,15 @@ body {
         .pageText__explore {
           color: #000000;
           margin: 0;
-          text-align: right;
+          text-align: center;
           text-transform: uppercase;
+          a {
+            color: #000;
+          }
+          .explore__arrow {
+            // padding: 0px;
+            transform: rotate(90deg);
+          }
         }
       }
 
@@ -293,7 +312,7 @@ body {
       background-color: #00FF38;
       color: #000000;
       border-top: 16px solid white;
-      padding: 0 16px;
+      // padding: 0 16px;
 
       .page3__booking {
         .page3__header {
@@ -303,15 +322,20 @@ body {
         }
         label {
           text-transform: uppercase;
+          width: 30%;
         }
 
-
+        .booking__form {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          gap:16px;
         input[type=text],
         input[type=date],
         select {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
+          width: 60%;
+          padding: 5px;
+          // margin-bottom: 1rem;
           display: inline-block;
           border: none;
           border-radius: 25px;
@@ -321,13 +345,13 @@ body {
 
         input[type=submit],
         input[type=reset] {
-          width: 80%;
-          padding: 0 16px;
-          padding: 14px 20px;
-          margin: 8px 10px;
-          margin-left: 50px;
+          width: 100%;
+          // padding: 0 16px;
+          padding: 10px;
+          // margin: 8px 10px;
+          // margin-bottom: 1rem;
           border: none;
-          border-radius: 18px;
+          border-radius: 25px;
           cursor: pointer;
         }
 
@@ -337,8 +361,9 @@ body {
 
         input[type=reset] {
           background-color: #AB76FF;
+          margin-bottom: 1rem;
         }
-
+      }
       }
 
       .page3__contactInfo {
@@ -347,7 +372,7 @@ body {
         .contactInfo__bg {
           filter: blur(3px);
           background-image: url("../assets/photos/wineTable-min.jpg");
-          min-width: 30vw;
+          // width: 100%;
           min-height: 50vh;
           background-size: cover;
           background-position: center;
@@ -357,20 +382,20 @@ body {
 
         .contactInfo__bg--text {
           position: absolute;
-          top: 15%;
-          left: 1%;
+          top: 10%;
+          left: -5%;
 
           li {
             display: block;
             margin-bottom: 15px;
 
             p {
-              font-size: 1rem;
-              margin: 0;
+              // font-size: 0.5rem;
+              // margin: 0;
             }
 
             a {
-              padding: 1rem;
+              // padding: 1rem;
               font-size: 2rem;
               color: #27BCEB;
               text-shadow: -2px -2px #000;
@@ -378,7 +403,7 @@ body {
           }
 
           .material-symbols-outlined {
-            font-size: 4rem;
+            font-size: 3rem;
             color: #27BCEB;
             text-shadow: -2px -2px #000;
           }
@@ -407,10 +432,10 @@ body {
 
     input {
       width: 40%;
-      padding: 14px 20px;
-      margin: 8px 0;
+      padding: 10px;
+      margin-bottom: 1rem;
       border: none;
-      border-radius: 18px;
+      border-radius: 25px;
       cursor: pointer;
       // font-size: 1.8rem;
     }
