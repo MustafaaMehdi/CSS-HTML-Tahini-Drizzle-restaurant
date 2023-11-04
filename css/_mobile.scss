@@ -411,7 +411,7 @@ header {
   }
 
   input {
-    width: 40%;
+    width: 150px;
     padding: 5px;
     position: relative;
     border: none;
@@ -423,10 +423,12 @@ header {
   input[type=submit] {
     background-color: #00FF38;
     bottom: 1rem;
+    right: -10rem;
   }
 
   input[type=reset] {
     background-color: #FFF135;
     bottom: 1rem;
+    right: 10rem;
   }
 }
