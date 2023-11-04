@@ -309,7 +309,7 @@ body {
     }
 
     .page3 {
-      grid-column: span 5;
+      // grid-column: span 5;
       background-color: #00FF38;
       color: #000000;
       border-top: 16px solid white;
@@ -320,6 +320,7 @@ body {
           font-size: 4rem;
           text-align: center;
           text-transform: uppercase;
+          margin-bottom: 2rem;
         }
         label {
           text-transform: uppercase;
@@ -339,8 +340,9 @@ body {
           // margin-bottom: 1rem;
           display: inline-block;
           border: none;
-          border-radius: 25px;
+          border-radius: 15px;
           box-sizing: border-box;
+          font-family: $secondaryFont;
         }
 
 
@@ -352,8 +354,9 @@ body {
           // margin: 8px 10px;
           // margin-bottom: 1rem;
           border: none;
-          border-radius: 25px;
+          border-radius: 15px;
           cursor: pointer;
+          text-transform: uppercase;
         }
 
         input[type=submit] {
@@ -374,7 +377,7 @@ body {
           filter: blur(3px);
           background-image: url("../assets/photos/wineTable-min.jpg");
           // width: 100%;
-          min-height: 50vh;
+          height: 65vh;
           background-size: cover;
           background-position: center;
           top: 0;
@@ -385,10 +388,13 @@ body {
           position: absolute;
           top: 10%;
           left: -5%;
-
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          justify-content: space-between;
           li {
-            display: block;
-            margin-bottom: 15px;
+            // display: block;
+            // margin-bottom: 15px;
 
             p {
               // font-size: 0.5rem;
@@ -396,7 +402,7 @@ body {
             }
 
             a {
-              // padding: 1rem;
+              padding: 1rem;
               font-size: 2rem;
               color: #27BCEB;
               text-shadow: -2px -2px #000;
@@ -417,14 +423,14 @@ body {
   }
 
   .cookieBanner {
-    grid-column: span 5;
+    // grid-column: span 5;
     background-color: #AB76FF;
     text-align: center;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
-    height: 120px;
+    height: 100px;
     p {
       font-family: $secondaryFont;
       margin: 0;
@@ -432,13 +438,14 @@ body {
     }
 
     input {
-      width: 40%;
-      padding: 10px;
-      margin-bottom: 1rem;
+      width: 240px;
+      padding: 5px;
+      // margin-bottom: 1rem;
       border: none;
-      border-radius: 25px;
+      border-radius: 15px;
       cursor: pointer;
       // font-size: 1.8rem;
+      text-transform: uppercase;
     }
 
     input[type=submit] {
