@@ -27,7 +27,7 @@ header {
 
   .menuTrigger {
     // position: relative;
-    z-index: 15;
+    // z-index: 15;
     // width: 70px;
     // height: 50px;
     // opacity: 0;
@@ -50,7 +50,7 @@ header {
 
       .burgerMenu__button--span {
         // display: block;
-        width: 50px;
+        // width: 50px;
         // height: 7px;
         // background-color: #FFF135;
         // border-radius: 6px;
@@ -165,9 +165,7 @@ header {
   .page1 {
     border-right: 16px solid #FFF135;
     border-left: 16px solid #FFF135;
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    // gap: 16px;
+
 
 
     .page1__title {
@@ -508,7 +506,7 @@ header {
         // background-size: cover;
         // background-position: center;
         // position: absolute;
-        top: 10%;
+        // top: 10%;
       }
 
       .contactInfo__bg--text {
@@ -550,7 +548,7 @@ header {
 .cookieBanner {
   display: flex;
   background-color: #AB76FF;
-  position: fixed;
+  // position: fixed;
   // bottom: 0;
   // left: 0;
   // right: 0;
@@ -558,7 +556,7 @@ header {
   z-index: 19;
   p {
     position: absolute;
-    font-family: $secondaryFont;
+    // font-family: $secondaryFont;
     font-size: 1.5rem;
     top: 1rem;
     left: 10rem;
@@ -568,10 +566,10 @@ header {
   input {
     position: absolute;
     margin: 8px 1px;
-    border: none;
+    // border: none;
     // border-radius: 15px;
     cursor: pointer;
-    // width: 240px;
+    width: 240px;
     padding: unset;
   }
 
