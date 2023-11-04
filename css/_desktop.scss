@@ -161,14 +161,15 @@ header {
 
   .page1,
   .page2 {
-    border-right: 16px solid #FFF135;
-    border-left: 16px solid #FFF135;
+    border-top: unset;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     gap: 16px;
   }
 
   .page1 {
+    border-right: 16px solid #FFF135;
+    border-left: 16px solid #FFF135;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     gap: 16px;
@@ -181,7 +182,7 @@ header {
         position: absolute;
         text-transform: uppercase;
         color: #00FF38;
-        font-size: clamp(1rem, 9vw, 9rem);
+        font-size: clamp(5rem, 9vw, 9rem);
         top: 7rem;
         left: 8.5rem;
         // z-index: 0;
@@ -192,7 +193,7 @@ header {
           position: absolute;
           font-size: 3.46rem;
           top: -1.3rem;
-          right: 0.3rem;
+          left: 0.3rem;
           color: #AB76FF;
         }
 
@@ -216,7 +217,7 @@ header {
       font-size: 3rem;
       color: #00FF38;
       background-color: #000000;
-      // padding: 0 32px;
+      padding: 16px 0;
       // margin-top: 16px;
       // position: relative;
       p {
@@ -251,13 +252,14 @@ header {
       background-color: #fff;
       color: #AB76FF;
       border-left: 16px solid #FFF135;
+      border-top: none;
       padding: 0 16px;
       grid-column: 6 / span 6;
       font-size: 3rem;
 
       .pageText__explore {
 
-        // text-align: left;
+        text-align: left;
         text-transform: uppercase;
         margin: 0;
         a {
@@ -265,6 +267,7 @@ header {
         }
         .explore__arrow {
           padding-left: 10px;
+          transform: none;
         }
       }
     }
@@ -280,6 +283,7 @@ header {
       gap: 16px;
       
     .foodMenu_image1 {
+      display: block;
       grid-column: 1 / span 3;
       width: 100%;
       object-fit: cover;
@@ -287,6 +291,7 @@ header {
     }
 
     .foodMenu_image2 {
+      display: block;
       grid-column: 4 / span 4;
       width: 100%;
       height: 400px;
@@ -296,6 +301,7 @@ header {
     }
 
     .foodMenu_image3 {
+      display: block;
       grid-column: 8 / span 4;
       // min-width: 500px;
       width: 100%;
@@ -320,7 +326,7 @@ header {
       .foodMenu_section {
         display: grid;
         grid-template-columns: repeat(11, 1fr);
-        grid-column: 1 / span 11;
+        // grid-column: 1 / span 11;
         color: #000000;
         background-color: white;
         border-bottom: 2px solid black;
@@ -329,7 +335,7 @@ header {
         margin: 16px 0;
         padding: 0;
         // gap: 8px;
-
+        text-align:left;
         li {
           margin: 16px 0;
           padding-left: 16px;
@@ -339,7 +345,7 @@ header {
           text-transform: uppercase;
           grid-column: 1 / span 4;
           margin-right: 1rem;
-   
+
           
         }
 
@@ -357,11 +363,11 @@ header {
         }
 
         .itemLabel {
-          font-size: 1rem;
-          text-transform: uppercase;
-          margin-block: 10px;
-          display: inline-block;
-          padding: 0 12px;
+          // font-size: 1rem;
+          // text-transform: uppercase;
+          // margin-block: 10px;
+          // display: inline-block;
+          // padding: 0 12px;
           font-family: 'Courier New', Courier, monospace;
           font-weight:600;
           // position: relative;
@@ -371,39 +377,39 @@ header {
           left: 20rem;
           top: 1.3rem;
           position: absolute;
-          background-color: #AC76FF;
-          transform: rotate(3deg);
+          // background-color: #AC76FF;
+          // transform: rotate(3deg);
 
-          span {
-            display: block;
-            transform: rotate(-3deg);
-          }
+          // span {
+          //   display: block;
+          //   transform: rotate(-3deg);
+          // }
         }
 
         .vegan {
           left: 23rem;
           bottom: 1rem;
           position: absolute;
-          background-color: #00FF39;
-          transform: rotate(-3deg);
+          // background-color: #00FF39;
+          // transform: rotate(-3deg);
 
-          span {
-            display: block;
-            transform: rotate(3deg);
-          }
+          // span {
+          //   display: block;
+          //   transform: rotate(3deg);
+          // }
         }
 
         .popular {
           left: 12rem;
           top: 1.3rem;
           position: absolute;
-          background-color: #FEF035;
-          transform: rotate(-1deg);
+          // background-color: #FEF035;
+          // transform: rotate(-1deg);
 
-          span {
-            display: block;
-            transform: rotate(1deg);
-          }
+          // span {
+          //   display: block;
+          //   transform: rotate(1deg);
+          // }
 
         }
       }
