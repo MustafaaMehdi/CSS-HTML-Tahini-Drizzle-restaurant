@@ -270,9 +270,9 @@ header {
   }
 
   .page2 {
-    background-color: #FFF135;
-    padding-bottom: 32px;
-    padding-top: 16px;
+    // background-color: #FFF135;
+    // padding-bottom: 16px;
+    // padding-top: 16px;
     .food_images {
       display: grid;
       grid-column: 1 / span 11;
@@ -318,30 +318,30 @@ header {
       .foodMenu_section {
         display: grid;
         grid-template-columns: repeat(11, 1fr);
-        color: #000000;
-        background-color: white;
+        // color: #000000;
+        // background-color: white;
         border-bottom: 2px solid black;
         border-top: 2px solid black;
-        position: relative;
+        // position: relative;
         margin: 16px 0;
         padding: 0;
         // gap: 8px;
         text-align:left;
         li {
           margin: 16px 0;
-          padding-left: 16px;
+          // padding: 16px;
         }
 
         .foodMenu_section--item {
-          text-transform: uppercase;
+          // text-transform: uppercase;
           grid-column: 1 / span 4;
-          margin-right: 1rem;
+          margin-left: 1rem;
 
           
         }
 
         .foodMenu_section--itemDescription {
-          font-family: $secondaryFont;
+          // font-family: $secondaryFont;
           grid-column: 5 / span 6;
           font-size: 1.75rem;
           padding-top: 10px;
@@ -359,8 +359,8 @@ header {
           // margin-block: 10px;
           // display: inline-block;
           // padding: 0 12px;
-          font-family: 'Courier New', Courier, monospace;
-          font-weight:600;
+          // font-family: 'Courier New', Courier, monospace;
+          // font-weight:600;
           // position: relative;
         }
 
