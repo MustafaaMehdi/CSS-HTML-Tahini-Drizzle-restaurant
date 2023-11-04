@@ -17,7 +17,7 @@ body {
       // bottom: 20px;
       // left: 50px;
       // z-index: 4;
-      margin: 8px 0;
+      margin: 0;
       // white-space: nowrap;
     }
 
@@ -91,8 +91,8 @@ body {
 
     input:checked+.burgerMenu button span {
       position: absolute;
-      transition: all 0.3s ease-in-out;
-      z-index: 5;
+      transition: all 0.3s cubic-bezier(1, 0.82, 0.165, 1);
+      // z-index: 5;
     }
 
     input:checked+.burgerMenu button span:nth-child(2) {
@@ -109,11 +109,11 @@ body {
       position: fixed;
     }
 
-    .menuTrigger:checked {
-      position: fixed;
-      top: 10px; 
-      left: 10px; 
-    }
+    // .menuTrigger:checked {
+    //   position: fixed;
+    //   top: 10px; 
+    //   left: 10px; 
+    // }
 
     input:checked+.burgerMenu nav {
       visibility: visible;
@@ -141,8 +141,9 @@ body {
       // z-index: 3;
 
       .page1__title {
+        position: relative;
         .title__tahini {
-          position: relative;
+
           text-transform: uppercase;
           color: #00FF38;
           font-size: 9rem;
@@ -161,7 +162,7 @@ body {
           .title__chickpeas {
             position: absolute;
             color: #FFF135;
-            font-size: 3.5rem;
+            font-size: 3.4rem;
             left: 2.3rem;
             bottom: 0.5rem;
             z-index: -1;
@@ -174,9 +175,10 @@ body {
 
       .page1__text1 {
         color: #00FF38;
-        padding: 0 16px;
+
         p {
-          margin: 0;
+          // margin: 0;
+          padding: 0.5rem;
         }
       }
       .page1__bottom--salladImg {
@@ -209,7 +211,6 @@ body {
             color: #000;
           }
           .explore__arrow {
-            // padding: 0px;
             transform: rotate(90deg);
           }
         }
