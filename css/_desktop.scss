@@ -7,11 +7,8 @@ body {
 }
 
 header {
-  // position: relative;
   z-index: 9;
-  // display: flex;
   flex-direction: column;
-  // background-color: #000000;
   position: fixed;
   height: 100vh;
   align-items: center;
@@ -26,11 +23,6 @@ header {
 
 
   .menuTrigger {
-    // position: relative;
-    // z-index: 15;
-    // width: 70px;
-    // height: 50px;
-    // opacity: 0;
     cursor: pointer;
   }
 
@@ -38,22 +30,10 @@ header {
   .burgerMenu {
 
     .burgerMenu__button {
-      // width: 35px;
-      // height: 35px;
-      // background: transparent;
-      // border: 0;
-      // position: absolute;
       left: 10px;
       top: 15px;
-      // z-index: 9;
-
 
       .burgerMenu__button--span {
-        // display: block;
-        // width: 50px;
-        // height: 7px;
-        // background-color: #FFF135;
-        // border-radius: 6px;
         margin-bottom: 6px;
         transition: all 0.5s cubic-bezier(0.5, 0.82, 0.165, 1);
     }
@@ -61,40 +41,8 @@ header {
 
   }
 
-    .navPage {
-      // position: fixed;
-      // left: 0;
-      // top: 0;
-      // background-color: #AB76FF;
-      // height: 100vh;
-      // width: 100vw;
-      // visibility: hidden;
-      // opacity: 0;
-      // transition: all 0.337s cubic-bezier(0.075, 0.82, 0.165, 1);
-      // z-index: 9;
-
-
-      ul {
-        // margin-bottom: 3rem;
-        // display: flex;
-        // flex-direction: column;
-        // position: absolute;
-        // top: 20%;
-        // left: 35%;
-        // height: 80%;
-        // justify-content: space-evenly;
-        // text-align: center;
-        // text-transform: uppercase;
+    .navPage ul {
         font-size: 4rem;
-        // li {
-        //   // padding-top: 5rem;
-        // //   a {
-        // //   color: white;
-        // }
-        // }
-      }
-
-
     }
   }
 
@@ -111,43 +59,13 @@ header {
     margin-left: -5px;
   }
 
-  // input:checked+.burgerMenu button span {
-  //   // position: absolute;
-  //   // transition: all 0.3s cubic-bezier(1, 0.82, 0.165, 1);
-  // }
-
-  // // input:checked+.burgerMenu button span:nth-child(2) {
-  // //   opacity: 0;
-  // // }
-
-  // input:checked+.burgerMenu button span:nth-child(1) {
-  //   transform: rotate(45deg);
-  //   // margin-left: 0;
-  // }
-
-
-  // input:checked+.burgerMenu button span:nth-child(3) {
-  //   transform: rotate(-45deg);
-  //   // margin-left: 0;
-  // }
-
-
-  input:checked+.burgerMenu nav {
-    // visibility: visible;
-    // opacity: 1;
-    // position: fixed;
-    // z-index: 89;
+ input:checked+.burgerMenu nav {
     margin-left: 4.5vw;
   }
 }
 
 .pageContent {
   margin-left: 4.5vw;
-  // grid-column: span 12;
-  // position: relative;
-  // z-index: 1;
-
-  // grid-template-rows: repeat(12, 1fr);
   .page1,
   .page2,
   .page3 {
@@ -170,36 +88,13 @@ header {
 
     .page1__title {
       grid-column: 1 / span 4;
-      // position: relative;
+
       .title__tahini {
         position: absolute;
-        // text-transform: uppercase;
-        // color: #00FF38;
-        // font-size: clamp(5rem, 9vw, 9rem);
         top: 7rem;
-        right: -4rem;
-        // z-index: 0;
-        // padding: 0px 16px;
+        right: 0;
         border: 16px;
         margin: 2.5rem;
-        // .title__drizzle {
-        //   // position: absolute;
-        //   // font-size: 3.46rem;
-        //   // top: -1.3rem;
-        //   // left: 11.9rem;
-        //   // color: #AB76FF;
-        // }
-
-        .title__chickpeas {
-          // position: absolute;
-          // color: #FFF135;
-          // font-size: 3.4rem;
-          // left: 25px;
-          // right: 6.7rem;
-          // top: 110px;
-          // top: 6.7rem;
-          // z-index: -1;
-        }
       }
 
     }
@@ -208,58 +103,39 @@ header {
     .page1__text1 {
       grid-column: 5 / span 7;
       font-size: 3rem;
-      // color: #00FF38;
-      // background-color: #000000;
-      // padding: 16px 0;
-      // position: relative;
       p {
-        // padding: 0 64px;
         margin-left: 3rem;
       }
     }
 
     .page1__bottom--salladImg {
       grid-column: 1 / span 5;
-      // position: relative;
+
       &:hover {
+
         .page1__arrow {
           bottom: 10px;
         }
       }
       .page1__salladImg {
-        // width: 100%;
-        // height: 100%;
         object-fit: cover;
       }
       .page1__arrow {
-        // position: absolute;
         bottom: 2rem;
-        left: 0.5rem;
-        // transform: rotate(90deg);
         transition: bottom 0.3s ease-in-out;
       }
     }
 
     .page1__text2 {
-      // background-color: #fff;
-      // color: #AB76FF;
       border-left: 16px solid #FFF135;
       border-top: unset;
       grid-column: 6 / span 6;
       font-size: 3rem;
-      p {
-        // margin-top: 0;
-      }
 
       .pageText__explore {
-
+        padding-top: 9rem;
         text-align: left;
-        text-transform: uppercase;
-        // margin: 0;
-        a {
-          // color: #000000;
-        }
-        .explore__arrow {
+                .explore__arrow {
           padding-left: 10px;
           transform: unset;
         }
@@ -268,9 +144,6 @@ header {
   }
 
   .page2 {
-    // background-color: #FFF135;
-    // padding-bottom: 16px;
-    // padding-top: 16px;
     .food_images {
       display: grid;
       grid-column: 1 / span 11;
@@ -297,7 +170,6 @@ header {
     .foodMenu_image3 {
       display: block;
       grid-column: 8 / span 4;
-      // min-width: 500px;
       width: 100%;
       object-fit: cover;
       height: 400px;
@@ -316,22 +188,17 @@ header {
       .foodMenu_section {
         display: grid;
         grid-template-columns: repeat(11, 1fr);
-        // color: #000000;
-        // background-color: white;
         border-bottom: 2px solid black;
         border-top: 2px solid black;
-        // position: relative;
         margin: 16px 0;
         padding: 0;
-        // gap: 8px;
         text-align:left;
+
         li {
           margin: 16px 0;
-          // padding: 16px;
         }
 
         .foodMenu_section--item {
-          // text-transform: uppercase;
           grid-column: 1 / span 4;
           margin-left: 1rem;
 
@@ -339,7 +206,6 @@ header {
         }
 
         .foodMenu_section--itemDescription {
-          // font-family: $secondaryFont;
           grid-column: 5 / span 6;
           font-size: 1.75rem;
           padding-top: 10px;
@@ -351,55 +217,23 @@ header {
           padding-right: 16px;
         }
 
-        .itemLabel {
-          // font-size: 1rem;
-          // text-transform: uppercase;
-          // margin-block: 10px;
-          // display: inline-block;
-          // padding: 0 12px;
-          // font-family: 'Courier New', Courier, monospace;
-          // font-weight:600;
-          // position: relative;
-        }
 
         .new {
           left: 20rem;
           bottom:0.7rem;
           position: absolute;
-          // background-color: #AC76FF;
-          // transform: rotate(3deg);
-
-          // span {
-          //   display: block;
-          //   transform: rotate(-3deg);
-          // }
         }
 
         .vegan {
           left: 23rem;
           bottom: 0.5rem;
           position: absolute;
-          // background-color: #00FF39;
-          // transform: rotate(-3deg);
-
-          // span {
-          //   display: block;
-          //   transform: rotate(3deg);
-          // }
         }
 
         .popular {
           left: 12rem;
           top: 1.3rem;
           position: absolute;
-          // background-color: #FEF035;
-          // transform: rotate(-1deg);
-
-          // span {
-          //   display: block;
-          //   transform: rotate(1deg);
-          // }
-
         }
       }
     }
@@ -407,48 +241,24 @@ header {
 
   .page3 {
     display: grid;
-    // grid-template-columns: repeat(11, 1fr);
-    // background-color: #00FF38;
-    // color: #000000;
     border-left: 16px solid white;
     border-top: unset;
-    // gap: 16px;
     align-items: center;
-    // border-top: 16px solid white;
-    // padding: 0 16px;
-
-    // .page3__header {
-    //   text-align: center;
-    //   text-transform: uppercase;
-    //   // margin: 0
-    // }
 
     .page3__booking {
-      // display: flex;
-      // flex-direction: column;
-      // max-height: 50vh;
       grid-column: 1 / span 3;
-      // position: relative;
-      // align-items: center;
       padding-left: 16px;
       .page3__header {
         font-size: 5rem;
         text-align: left;
-        // text-transform: uppercase;
       }
       .booking__form {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap:32px;
     label {
-      // justify-content: flex-start;
       font-size: 2.5rem;
-      // float: left;
       width: 100%;
-      // margin: 10px 10px;
-      // text-transform: uppercase;
-      // display: inline-block;
-      // display: block;
       grid-column: 1 / span 2;
     }
       input[type=text],
@@ -458,84 +268,46 @@ header {
         grid-column: 3 / span 5;
         width: 83%;
         height: 95%;
-        // display: inline-block;
-        // border: none;
-        // border-radius: 15px;
-        // font-family: $secondaryFont;
       }
 
 
       input[type=submit],
       input[type=reset] {
-        // font-size: 1.5rem;
         width: 85%;
         margin: 8px 1px;
         border: none;
-        // border-radius: 18px;
         cursor: pointer;
         padding: unset;
       }
 
       input[type=submit] {
         grid-column: 4 / span 3;
-        // background-color: #FFF135;
       }
 
       input[type=reset] {
         grid-column: 1 / span 3;
         grid-row: 7 / span 1;
-        // background-color: #AB76FF;
       }
     }
   }
 
 
     .page3__contactInfo {
-      // top: 5%;
-      // left: 10%;
-      // position: relative;
       grid-column: 4 / span 6;
-      // max-height: 50vh;
       .contactInfo__bg {
-        // filter: blur(3px);
-        // background-image: url("../assets/photos/wineTable-min.jpg");
-        // max-width: 40vw;
-        // min-height: 60vh;
         width: 50vw;
         height: 70vh;
-        // background-size: cover;
-        // background-position: center;
-        // position: absolute;
-        // top: 10%;
       }
 
       .contactInfo__bg--text {
-        // position: absolute;
         top: 5%;
         left: 5%;
-        li {
-          // display: inline-block;
-          // margin-bottom: 15px;
-
-          // p {
-          //   // font-size: clamp(0.5rem, 5vh, 2.5rem);;
-          //   // margin: 0;
-          // }
-
-          a {
-            // padding: 1rem;
-            // padding-right: 4rem;
+        li a{
             font-size: 2.5rem;
-            // color: #27BCEB;
-            // text-shadow: -2px -2px #000;
-            // width: 1vw;
-          }
         }
 
         .material-symbols-outlined {
           font-size: 5rem;
-          // color: #27BCEB;
-          // text-shadow: -2px -2px #000;
         }
       }
     }
@@ -547,18 +319,10 @@ header {
 
 .cookieBanner {
   display: flex;
-  background-color: #AB76FF;
-  // position: fixed;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
-  // height: 100px;
   z-index: 19;
   p {
     position: absolute;
-    // font-family: $secondaryFont;
-    font-size: 1.5rem;
-    top: 1rem;
+    top: 1.5rem;
     left: 10rem;
 
   }
@@ -566,22 +330,17 @@ header {
   input {
     position: absolute;
     margin: 8px 1px;
-    // border: none;
-    // border-radius: 15px;
     cursor: pointer;
     width: 240px;
-    padding: unset;
   }
 
   input[type=submit] {
-    // background-color: #00FF38;
     bottom: 1rem;
     right: 3rem;
   }
 
   input[type=reset] {
     bottom: 1rem;
-    right: 22rem;
-    // background-color: #FFF135;
+    right: 19rem;
   }
 }

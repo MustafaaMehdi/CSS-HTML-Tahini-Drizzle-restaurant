@@ -435,25 +435,31 @@ body {
       font-family: $secondaryFont;
       margin: 0;
       padding: 16px 0;
+      font-size: 1.5rem;
     }
 
     input {
       width: 40%;
       padding: 5px;
+      position: relative;
       // margin-bottom: 1rem;
       border: none;
       border-radius: 15px;
       // cursor: pointer;
-      // font-size: 1.8rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
     }
 
     input[type=submit] {
       background-color: #00FF38;
+      bottom: 1rem;
+      // right: 2rem;
     }
 
     input[type=reset] {
       background-color: #FFF135;
+      bottom: 1rem;
+      // right: 12rem;
     }
   }
 

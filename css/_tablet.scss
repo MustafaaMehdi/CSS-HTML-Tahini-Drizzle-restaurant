@@ -158,24 +158,24 @@ header {
         margin: 0;
         z-index: 1;
         .title__drizzle {
-          position: absolute;
-          font-size: 3.05rem;
+          // position: absolute;
+          // font-size: 3.05rem;
           // left: 192px;
           // top: -25px;
-          top: -1.3rem;
-          left: 9.7rem;
-          color: #AB76FF;
+          // top: -1.3rem;
+          // left: 9.7rem;
+          // color: #AB76FF;
         }
 
         .title__chickpeas {
-          position: absolute;
-          color: #FFF135;
-          font-size: 3.4rem;
-          // left: 25px;
-          left: 1rem;
-          // top: 110px;
-          top: 6rem;
-          z-index: -1;
+          // position: absolute;
+          // color: #FFF135;
+          // font-size: 3.4rem;
+          // // left: 25px;
+          // left: 1rem;
+          // // top: 110px;
+          // top: 6rem;
+          // z-index: -1;
         }
       }
 
@@ -542,7 +542,7 @@ header {
   }
 
   input {
-    position: absolute;
+    // position: absolute;
     // width: 40%;
     // padding: 4px 10px;
     // padding-bottom: 30px;
@@ -555,13 +555,13 @@ header {
 
   input[type=submit] {
     // background-color: #00FF38;
-    bottom: 0.5rem;
-    right: 4.5rem;
+    // bottom: 0.5rem;
+    // right: 4.5rem;
   }
 
   input[type=reset] {
-    bottom: 0.5rem;
-    left: 4.5rem;
+    // bottom: 0.5rem;
+    // left: 4.5rem;
     // background-color: #FFF135;
   }
 }
