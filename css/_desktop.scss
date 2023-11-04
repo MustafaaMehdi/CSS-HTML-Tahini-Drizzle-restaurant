@@ -133,18 +133,18 @@ header {
 
 
   input:checked+.burgerMenu nav {
-    visibility: visible;
-    opacity: 1;
-    position: fixed;
-    z-index: 89;
-    margin-left: 4.6vw;
+    // visibility: visible;
+    // opacity: 1;
+    // position: fixed;
+    // z-index: 89;
+    margin-left: 4.5vw;
   }
 }
 
 .pageContent {
   margin-left: 4.5vw;
   // grid-column: span 12;
-  position: relative;
+  // position: relative;
   // z-index: 1;
 
   // grid-template-rows: repeat(12, 1fr);
@@ -172,35 +172,35 @@ header {
 
     .page1__title {
       grid-column: 1 / span 4;
-      position: relative;
+      // position: relative;
       .title__tahini {
         position: absolute;
-        text-transform: uppercase;
-        color: #00FF38;
+        // text-transform: uppercase;
+        // color: #00FF38;
         // font-size: clamp(5rem, 9vw, 9rem);
         top: 7rem;
         right: -4rem;
         // z-index: 0;
         // padding: 0px 16px;
         border: 16px;
-
-        .title__drizzle {
-          position: absolute;
-          font-size: 3.46rem;
-          // top: -1.3rem;
-          left: 0.3rem;
-          color: #AB76FF;
-        }
+        margin: 2.5rem;
+        // .title__drizzle {
+        //   // position: absolute;
+        //   // font-size: 3.46rem;
+        //   // top: -1.3rem;
+        //   // left: 11.9rem;
+        //   // color: #AB76FF;
+        // }
 
         .title__chickpeas {
-          position: absolute;
-          color: #FFF135;
+          // position: absolute;
+          // color: #FFF135;
           // font-size: 3.4rem;
           // left: 25px;
-          right: 6.7rem;
+          // right: 6.7rem;
           // top: 110px;
           // top: 6.7rem;
-          z-index: -1;
+          // z-index: -1;
         }
       }
 
@@ -210,8 +210,8 @@ header {
     .page1__text1 {
       grid-column: 5 / span 7;
       font-size: 3rem;
-      color: #00FF38;
-      background-color: #000000;
+      // color: #00FF38;
+      // background-color: #000000;
       // padding: 16px 0;
       // position: relative;
       p {
@@ -222,33 +222,33 @@ header {
 
     .page1__bottom--salladImg {
       grid-column: 1 / span 5;
-      position: relative;
+      // position: relative;
       &:hover {
         .page1__arrow {
           bottom: 10px;
         }
       }
       .page1__salladImg {
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
         object-fit: cover;
       }
       .page1__arrow {
-        position: absolute;
-        bottom: 40px;
-        left: 10px;
-        transform: rotate(90deg);
+        // position: absolute;
+        bottom: 2rem;
+        left: 0.5rem;
+        // transform: rotate(90deg);
         transition: bottom 0.3s ease-in-out;
       }
     }
 
     .page1__text2 {
-      background-color: #fff;
-      color: #AB76FF;
+      // background-color: #fff;
+      // color: #AB76FF;
       border-left: 16px solid #FFF135;
       border-top: unset;
       grid-column: 6 / span 6;
-      // font-size: 3rem;
+      font-size: 3rem;
       p {
         // margin-top: 0;
       }
@@ -257,9 +257,9 @@ header {
 
         text-align: left;
         text-transform: uppercase;
-        margin: 0;
+        // margin: 0;
         a {
-          color: #000000;
+          // color: #000000;
         }
         .explore__arrow {
           padding-left: 10px;
